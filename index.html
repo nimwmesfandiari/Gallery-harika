@@ -2,199 +2,894 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Gallery Harika | فروشگاه پوشاک مردانه">
 <title>Gallery Harika | فروشگاه پوشاک مردانه</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--gold:#c9a84c;--gold2:#e8b84b;--dark:#171717;--cream:#f8f6f2;--line:#e8e2d8;--muted:#777}
-html{scroll-behavior:smooth}body{font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;background:var(--cream);color:#222;line-height:1.8}
-body.no-scroll{overflow:hidden}a{text-decoration:none;color:inherit}button,input,textarea{font-family:inherit}button{cursor:pointer}ul{list-style:none}
-.container{width:min(1280px,calc(100% - 32px));margin:auto}
-.top-banner{background:#171717;color:#f5f0e8;text-align:center;padding:9px 14px;font-size:.78rem;display:flex;justify-content:center;flex-wrap:wrap;gap:5px 28px}.highlight{color:var(--gold2);font-weight:700}
-.header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:1000;box-shadow:0 2px 12px #0000000a}
-.header .container{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand-wrap{display:flex;align-items:center;gap:12px;min-width:220px}.brand-logo{width:48px;height:48px;object-fit:contain;display:block;border-radius:50%}.brand-logo.fallback{display:none}
-.logo{text-align:right;font-size:1.55rem;font-weight:800;letter-spacing:1px;line-height:1.1}.logo span{color:var(--gold)}.logo-sub{display:block;color:#888;font-size:.63rem;font-weight:400;letter-spacing:1px;margin-top:4px}
-.nav-menu{display:flex;align-items:center;justify-content:center;gap:25px;font-size:.9rem;font-weight:500}.nav-menu a:hover{color:var(--gold)}
-.header-actions{display:flex;align-items:center;gap:18px;font-size:1.05rem}.icon-btn{position:relative;border:0;background:none;color:#222;font-size:1.1rem;padding:5px}.icon-btn:hover{color:var(--gold)}
-.cart-badge{position:relative}.badge{position:absolute;top:-5px;right:-8px;background:var(--gold);color:#fff;min-width:18px;height:18px;padding:0 4px;border-radius:20px;font-size:.62rem;display:flex;align-items:center;justify-content:center;font-weight:800}
-.hero{background:linear-gradient(135deg,#f0ebe2,#e8e0d4);padding:74px 0 62px;text-align:center;border-bottom:1px solid #e0d8cc}.hero h1{font-size:2.45rem;font-weight:400;letter-spacing:1px;margin-bottom:12px}.hero h1 strong{font-weight:800}.hero p{font-size:1rem;color:#555;max-width:720px;margin:0 auto 28px}
-.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#171717;color:#fff;border:0;padding:12px 34px;font-weight:700;transition:.25s;border-radius:2px}.btn-primary:hover{background:var(--gold);transform:translateY(-2px)}
-.section-title{text-align:center;margin:58px 0 34px}.section-title h2{font-size:1.85rem;font-weight:400}.section-title h2 span{font-weight:800}.section-title p{color:#888;font-size:.9rem;margin-top:4px}
-.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:30px}.product-card{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;transition:.25s;display:flex;flex-direction:column}.product-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #00000014}
-.product-image{height:280px;background:#f0ece4;display:flex;align-items:center;justify-content:center;color:#c8c2b7;font-size:4rem;position:relative;overflow:hidden}.product-image img{width:100%;height:100%;object-fit:cover}.tag{position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;padding:3px 11px;border-radius:20px;font-size:.64rem;font-weight:700}
-.product-info{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}.brand{font-size:.66rem;color:#aaa;letter-spacing:1.5px;font-weight:700}.product-info h3{font-size:.95rem;font-weight:600;margin:5px 0 6px}.price{font-size:1.05rem;font-weight:800}.old{font-size:.78rem;color:#aaa;font-weight:400;text-decoration:line-through;margin-right:7px}.rating{color:var(--gold2);font-size:.78rem;margin-top:5px}.rating span{color:#888}
-.btn-add{width:100%;margin-top:auto;padding:9px 14px;border:1.5px solid #222;background:#fff;border-radius:28px;font-weight:700;font-size:.77rem;transition:.2s}.btn-add:hover{background:#171717;color:#fff}
-.story-section{background:#fff;padding:68px 0;margin-top:50px;border-block:1px solid var(--line)}.story-section .container{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.story-text h2{font-size:1.9rem;font-weight:400;margin-bottom:15px}.story-text h2 span{font-weight:800}.story-text p{color:#555;margin-bottom:14px;font-size:.92rem}.story-image{height:320px;background:#e8e0d4;border-radius:5px;display:flex;align-items:center;justify-content:center;color:#bbb;font-size:5rem}
-.blog-preview{padding:38px 0 58px}.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.blog-card{background:#fff;border:1px solid var(--line);border-radius:5px;padding:22px}.date{font-size:.7rem;color:#aaa}.blog-card h3{font-size:1rem;margin:8px 0;font-weight:700}.blog-card p{font-size:.87rem;color:#666}.read-more{display:inline-block;margin-top:10px;color:var(--gold);font-weight:700;font-size:.8rem}
-.footer{background:#171717;color:#ccc;padding:48px 0 25px}.footer .container{display:grid;grid-template-columns:repeat(4,1fr);gap:35px}.footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}.footer p,.footer li{font-size:.82rem;line-height:2}.footer a:hover{color:var(--gold)}.social{display:flex;gap:15px;font-size:1.25rem;margin-top:6px}.footer-bottom{border-top:1px solid #333;margin-top:35px;padding-top:18px;text-align:center;color:#777;font-size:.75rem}
-.overlay{position:fixed;inset:0;background:#0000007a;opacity:0;visibility:hidden;transition:.25s;z-index:1500}.overlay.show{opacity:1;visibility:visible}
-.cart-drawer{position:fixed;top:0;right:0;width:min(440px,94vw);height:100vh;background:#fff;z-index:1600;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column;box-shadow:-10px 0 30px #00000026}.cart-drawer.open{transform:translateX(0)}
-.drawer-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.drawer-head h3{font-size:1.05rem}.close-btn{border:0;background:none;font-size:1.25rem;color:#555}
-.cart-items{padding:15px 18px;overflow:auto;flex:1}.empty-cart{text-align:center;color:#999;padding:70px 20px}.empty-cart i{font-size:3rem;color:#ddd;margin-bottom:12px}
-.cart-item{display:grid;grid-template-columns:65px 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #eee}.cart-thumb{width:65px;height:72px;background:#f1eee8;display:flex;align-items:center;justify-content:center;color:#bbb;overflow:hidden}.cart-thumb img{width:100%;height:100%;object-fit:cover}.cart-item h4{font-size:.82rem;margin-bottom:3px}.cart-price{font-size:.75rem;color:#555}.qty-controls{display:flex;align-items:center;gap:7px;margin-top:6px}.qty-controls button{width:25px;height:25px;border:1px solid #ddd;background:#fff;border-radius:4px}.remove-item{border:0;background:none;color:#aaa;font-size:.9rem}.remove-item:hover{color:#b42318}
-.drawer-foot{border-top:1px solid var(--line);padding:16px 18px}.summary-row{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:12px}.summary-row.total{font-size:1rem;font-weight:800}.checkout-btn{width:100%;padding:12px;border:0;background:#171717;color:#fff;font-weight:700}.checkout-btn:hover{background:var(--gold)}
-.modal{position:fixed;inset:0;z-index:2000;background:#0000008c;display:flex;align-items:center;justify-content:center;padding:18px;opacity:0;visibility:hidden;transition:.25s}.modal.show{opacity:1;visibility:visible}.modal-box{width:min(620px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:8px;box-shadow:0 20px 60px #00000040}.modal-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-head h3{font-size:1.05rem}.modal-body{padding:20px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field.full{grid-column:1/-1}.field label{display:block;font-size:.78rem;font-weight:600;margin-bottom:5px}.field input,.field textarea{width:100%;border:1px solid #ddd;border-radius:5px;padding:10px 11px;outline:none;font-size:.85rem}.field input:focus,.field textarea:focus{border-color:var(--gold)}.field textarea{min-height:90px;resize:vertical}
-.checkout-summary{background:#f8f6f2;border-radius:5px;padding:13px;margin:16px 0}.submit-order{width:100%;padding:12px;background:#171717;color:#fff;border:0;font-weight:800}.submit-order:disabled{opacity:.6;cursor:not-allowed}.success-box{text-align:center;padding:30px 20px}.success-box i{font-size:3.5rem;color:#2e7d32;margin-bottom:12px}.order-code{font-size:1.2rem;font-weight:800;margin:8px 0}.notice{font-size:.76rem;color:#777;margin-top:10px}.error-text{color:#b42318;font-size:.76rem;margin-top:6px;display:none}.error-text.show{display:block}
-.toast{position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);background:#171717;color:#fff;padding:10px 18px;border-radius:30px;font-size:.8rem;z-index:3000;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:1000px){.product-grid{grid-template-columns:repeat(2,1fr)}.header .container{flex-wrap:wrap;padding:12px 0}.nav-menu{order:3;width:100%;padding-bottom:4px}.footer .container{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:650px){.container{width:min(100% - 24px,1280px)}.top-banner{font-size:.68rem}.header .container{justify-content:center}.brand-wrap{justify-content:center}.header-actions{position:absolute;left:12px;top:20px}.nav-menu{gap:13px;font-size:.75rem}.hero{padding:48px 0 42px}.hero h1{font-size:1.65rem}.hero p{font-size:.85rem}.product-grid{grid-template-columns:1fr 1fr;gap:12px}.product-image{height:190px}.product-info{padding:11px}.product-info h3{font-size:.8rem}.price{font-size:.88rem}.old{font-size:.65rem}.btn-add{font-size:.68rem;padding:7px 6px}.story-section .container{grid-template-columns:1fr;gap:25px}.story-image{height:210px}.blog-grid{grid-template-columns:1fr}.footer .container{grid-template-columns:1fr 1fr;gap:22px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}}
-@media(max-width:390px){.product-grid{grid-template-columns:1fr}.product-image{height:230px}}
+:root{
+ --gold:#c9a84c;--gold-light:#e8b84b;--dark:#191919;--cream:#f8f6f2;
+ --white:#fff;--text:#242424;--muted:#777;--line:#e8e2d8;
+}
+html{scroll-behavior:smooth}
+body{
+ font-family:"Vazirmatn","Segoe UI",Tahoma,sans-serif;
+ background:var(--cream);color:var(--text);line-height:1.8;
+}
+body.locked{overflow:hidden}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{width:min(1280px,calc(100% - 32px));margin-inline:auto}
+
+/* TOP BAR */
+.top-banner{
+ background:var(--dark);color:#f5f0e8;display:flex;justify-content:center;
+ align-items:center;flex-wrap:wrap;gap:4px 28px;padding:8px 14px;
+ font-size:.78rem;text-align:center
+}
+.highlight{color:var(--gold-light);font-weight:800}
+
+/* HEADER */
+.header{
+ position:sticky;top:0;z-index:1000;background:#fff;
+ border-bottom:1px solid var(--line);box-shadow:0 2px 12px rgba(0,0,0,.05)
+}
+.header-inner{
+ min-height:88px;display:grid;grid-template-columns:1fr auto 1fr;
+ align-items:center;gap:24px
+}
+.brand-link{justify-self:start;display:flex;align-items:center;gap:11px;min-width:0}
+.brand-logo{
+ width:48px;height:48px;object-fit:contain;display:block;flex:none
+}
+.brand-logo.hidden{display:none}
+.logo-block{line-height:1.15}
+.logo{
+ font-size:1.55rem;font-weight:800;letter-spacing:1px;white-space:nowrap
+}
+.logo span{color:var(--gold)}
+.logo-sub{display:block;color:#888;font-size:.62rem;font-weight:400;letter-spacing:1px;margin-top:4px}
+.nav-menu{
+ display:flex;align-items:center;justify-content:center;gap:27px;
+ font-size:.9rem;font-weight:500;white-space:nowrap
+}
+.nav-menu a{transition:color .2s}
+.nav-menu a:hover{color:var(--gold)}
+.header-actions{
+ justify-self:end;display:flex;align-items:center;gap:17px
+}
+.icon-btn{
+ position:relative;width:36px;height:36px;border:0;background:transparent;
+ color:#222;display:inline-flex;align-items:center;justify-content:center;
+ font-size:1.05rem;border-radius:50%;transition:.2s
+}
+.icon-btn:hover{color:var(--gold);background:#faf7f0}
+.cart-badge{position:relative}
+.badge{
+ position:absolute;top:-3px;right:-4px;min-width:18px;height:18px;
+ padding:0 4px;border-radius:20px;background:var(--gold);color:#fff;
+ font-size:.6rem;font-weight:800;display:flex;align-items:center;justify-content:center
+}
+
+/* HERO */
+.hero{
+ background:linear-gradient(135deg,#f0ebe2,#e8e0d4);
+ padding:72px 0 60px;text-align:center;border-bottom:1px solid #e0d8cc
+}
+.hero h1{font-size:2.45rem;font-weight:400;letter-spacing:1px;margin-bottom:10px}
+.hero h1 strong{font-weight:800}
+.hero p{max-width:720px;margin:0 auto 27px;color:#555;font-size:1rem}
+.btn-primary{
+ display:inline-flex;align-items:center;justify-content:center;gap:8px;
+ background:var(--dark);color:#fff;border:0;padding:12px 34px;
+ font-size:.9rem;font-weight:700;transition:.25s
+}
+.btn-primary:hover{background:var(--gold);transform:translateY(-2px)}
+
+/* PRODUCTS */
+.section-title{text-align:center;margin:57px 0 33px}
+.section-title h2{font-size:1.85rem;font-weight:400}
+.section-title h2 span{font-weight:800}
+.section-title p{color:#888;font-size:.9rem;margin-top:3px}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.product-card{
+ background:#fff;border:1px solid var(--line);border-radius:6px;overflow:hidden;
+ display:flex;flex-direction:column;transition:.25s
+}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(0,0,0,.09)}
+.product-image{
+ height:280px;background:#f0ece4;position:relative;
+ display:flex;align-items:center;justify-content:center;
+ color:#c6c0b5;font-size:4rem;overflow:hidden
+}
+.product-image img{width:100%;height:100%;object-fit:cover}
+.tag{
+ position:absolute;top:12px;right:12px;background:var(--gold);color:#fff;
+ padding:3px 11px;border-radius:20px;font-size:.64rem;font-weight:800
+}
+.product-info{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
+.brand{font-size:.66rem;color:#aaa;letter-spacing:1.5px;font-weight:700}
+.product-info h3{font-size:.95rem;font-weight:600;margin:5px 0 6px}
+.price{font-size:1.05rem;font-weight:800}
+.old{font-size:.77rem;color:#aaa;text-decoration:line-through;font-weight:400;margin-right:7px}
+.rating{color:var(--gold-light);font-size:.78rem;margin:5px 0 12px}
+.rating span{color:#888}
+.btn-add{
+ width:100%;margin-top:auto;padding:9px 14px;background:#fff;
+ border:1.5px solid var(--dark);border-radius:28px;font-size:.77rem;font-weight:700;
+ transition:.2s
+}
+.btn-add:hover{background:var(--dark);color:#fff}
+
+/* STORY */
+.story-section{
+ margin-top:58px;padding:68px 0;background:#fff;
+ border-block:1px solid var(--line)
+}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.story-text h2{font-size:1.9rem;font-weight:400;margin-bottom:15px}
+.story-text h2 span{font-weight:800}
+.story-text p{color:#555;font-size:.92rem;margin-bottom:14px}
+.story-image{
+ height:320px;background:#e8e0d4;border-radius:5px;color:#bbb;
+ display:flex;align-items:center;justify-content:center;font-size:5rem
+}
+
+/* BLOG */
+.blog-preview{padding:38px 0 58px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{background:#fff;border:1px solid var(--line);border-radius:5px;padding:22px}
+.date{font-size:.7rem;color:#aaa}
+.blog-card h3{font-size:1rem;margin:8px 0;font-weight:700}
+.blog-card p{font-size:.87rem;color:#666}
+.read-more{display:inline-block;margin-top:10px;color:var(--gold);font-weight:700;font-size:.8rem}
+
+/* FOOTER */
+.footer{background:var(--dark);color:#ccc;padding:48px 0 25px;margin-top:0}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:35px}
+.footer h4{color:#fff;font-size:.95rem;margin-bottom:12px}
+.footer p,.footer li{font-size:.82rem;line-height:2}
+.footer a:hover{color:var(--gold)}
+.social{display:flex;gap:15px;font-size:1.25rem;margin-top:6px}
+.footer-bottom{
+ border-top:1px solid #333;margin-top:35px;padding-top:18px;text-align:center;
+ color:#777;font-size:.75rem
+}
+
+/* CART DRAWER */
+.overlay{
+ position:fixed;inset:0;background:rgba(0,0,0,.58);z-index:1400;
+ opacity:0;visibility:hidden;transition:.25s
+}
+.overlay.show{opacity:1;visibility:visible}
+.cart-drawer{
+ position:fixed;top:0;right:0;width:min(440px,94vw);height:100vh;
+ background:#fff;z-index:1500;transform:translateX(105%);
+ transition:transform .3s;display:flex;flex-direction:column;
+ box-shadow:-12px 0 35px rgba(0,0,0,.2)
+}
+.cart-drawer.open{transform:translateX(0)}
+.drawer-head{
+ padding:18px 20px;border-bottom:1px solid var(--line);
+ display:flex;align-items:center;justify-content:space-between
+}
+.drawer-head h3{font-size:1.05rem}
+.close-btn{
+ border:0;background:transparent;color:#555;width:34px;height:34px;
+ display:flex;align-items:center;justify-content:center;border-radius:50%
+}
+.close-btn:hover{background:#f5f5f5}
+.cart-items{flex:1;overflow:auto;padding:14px 18px}
+.empty-cart{text-align:center;color:#999;padding:75px 20px}
+.empty-cart i{display:block;font-size:3rem;color:#ddd;margin-bottom:10px}
+.cart-item{
+ display:grid;grid-template-columns:64px minmax(0,1fr) 28px;
+ gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid #eee
+}
+.cart-thumb{
+ width:64px;height:72px;background:#f1eee8;display:flex;align-items:center;
+ justify-content:center;color:#bbb;overflow:hidden
+}
+.cart-thumb img{width:100%;height:100%;object-fit:cover}
+.cart-item h4{font-size:.82rem;margin-bottom:3px}
+.cart-price{font-size:.75rem;color:#555}
+.qty-controls{display:flex;align-items:center;gap:7px;margin-top:6px}
+.qty-controls button{
+ width:25px;height:25px;border:1px solid #ddd;background:#fff;border-radius:4px
+}
+.remove-item{border:0;background:none;color:#aaa}
+.remove-item:hover{color:#b42318}
+.drawer-foot{border-top:1px solid var(--line);padding:16px 18px}
+.summary-row{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:10px}
+.summary-row.total{font-size:1rem;font-weight:800}
+.checkout-btn{
+ width:100%;padding:12px;border:0;background:var(--dark);color:#fff;font-weight:800
+}
+.checkout-btn:hover{background:var(--gold)}
+
+/* CHECKOUT MODAL */
+.modal{
+ position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.7);
+ display:flex;align-items:center;justify-content:center;padding:18px;
+ opacity:0;visibility:hidden;transition:.25s
+}
+.modal.show{opacity:1;visibility:visible}
+.modal-box{
+ width:min(620px,100%);max-height:92vh;overflow:auto;
+ background:#fff;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.3)
+}
+.modal-head{
+ padding:17px 20px;border-bottom:1px solid var(--line);
+ display:flex;align-items:center;justify-content:space-between
+}
+.modal-head h3{font-size:1.05rem}
+.modal-body{padding:20px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field.full{grid-column:1/-1}
+.field label{display:block;font-size:.78rem;font-weight:600;margin-bottom:5px}
+.field input,.field textarea{
+ width:100%;border:1px solid #ddd;border-radius:5px;padding:10px 11px;
+ outline:0;font-size:.84rem;background:#fff
+}
+.field input:focus,.field textarea:focus{border-color:var(--gold)}
+.field textarea{min-height:90px;resize:vertical}
+.checkout-summary{background:#f8f6f2;border-radius:5px;padding:13px;margin:16px 0}
+.submit-order{
+ width:100%;padding:12px;border:0;background:var(--dark);color:#fff;font-weight:800
+}
+.submit-order:hover{background:var(--gold)}
+.submit-order:disabled{opacity:.6;cursor:not-allowed}
+.notice{font-size:.75rem;color:#777;margin-top:10px}
+.error-text{display:none;color:#b42318;font-size:.76rem;margin-top:8px}
+.error-text.show{display:block}
+.success-box{text-align:center;padding:30px 20px}
+.success-box>i{font-size:3.5rem;color:#2e7d32;margin-bottom:10px}
+.order-code{font-size:1.2rem;font-weight:800;margin:8px 0}
+
+/* TOAST */
+.toast{
+ position:fixed;left:50%;bottom:25px;transform:translate(-50%,20px);
+ z-index:3000;background:var(--dark);color:#fff;padding:10px 18px;
+ border-radius:30px;font-size:.8rem;opacity:0;pointer-events:none;transition:.25s
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+ .header-inner{grid-template-columns:auto 1fr auto}
+ .nav-menu{gap:18px;font-size:.82rem}
+ .product-grid{grid-template-columns:repeat(2,1fr)}
+ .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:760px){
+ .container{width:min(100% - 24px,1280px)}
+ .header-inner{
+   min-height:auto;display:flex;flex-wrap:wrap;justify-content:space-between;
+   gap:8px 12px;padding:11px 0
+ }
+ .brand-link{order:1;justify-self:auto}
+ .header-actions{order:2;justify-self:auto}
+ .nav-menu{
+   order:3;width:100%;overflow-x:auto;justify-content:flex-start;
+   padding:3px 0 5px;gap:18px;scrollbar-width:none
+ }
+ .nav-menu::-webkit-scrollbar{display:none}
+ .hero{padding:48px 0 42px}
+ .hero h1{font-size:1.65rem}
+ .hero p{font-size:.85rem}
+ .story-grid{grid-template-columns:1fr;gap:25px}
+ .story-image{height:210px}
+ .blog-grid{grid-template-columns:1fr}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+}
+@media(max-width:500px){
+ .top-banner{font-size:.65rem;gap:2px 12px}
+ .logo{font-size:1.25rem}
+ .logo-sub{font-size:.55rem}
+ .brand-logo{width:42px;height:42px}
+ .header-actions{gap:5px}
+ .icon-btn{width:34px;height:34px}
+ .nav-menu{font-size:.72rem;gap:15px}
+ .product-grid{grid-template-columns:1fr 1fr;gap:11px}
+ .product-image{height:190px;font-size:3rem}
+ .product-info{padding:10px}
+ .product-info h3{font-size:.78rem}
+ .price{font-size:.84rem}
+ .old{font-size:.62rem}
+ .btn-add{font-size:.66rem;padding:7px 4px}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:20px}
+}
+@media(max-width:370px){
+ .product-grid{grid-template-columns:1fr}
+ .product-image{height:225px}
+}
 </style>
 </head>
+
 <body>
 
 <div class="top-banner">
-<span>🔥 تخفیف ویژه تا <span class="highlight">۳۰٪</span> برای محصولات منتخب</span>
-<span>✨ ارسال رایگان برای سفارش‌های بالای <span class="highlight">۱,۰۰۰,۰۰۰ تومان</span></span>
-<span>🎁 <span class="highlight">۱۰٪</span> تخفیف برای پرداخت نقدی</span>
+ <span>🔥 تخفیف ویژه تا <span class="highlight">۳۰٪</span> برای محصولات منتخب</span>
+ <span>✨ ارسال رایگان برای سفارش‌های بالای <span class="highlight">۱,۰۰۰,۰۰۰ تومان</span></span>
+ <span>🎁 <span class="highlight">۱۰٪</span> تخفیف برای پرداخت نقدی</span>
 </div>
 
 <header class="header">
-<div class="container">
-<a href="#" class="brand-wrap" aria-label="Gallery Harika">
-<img src="logo.png" alt="لوگوی Gallery Harika" class="brand-logo" onerror="this.classList.add('fallback')">
-<div class="logo">Gallery <span>Harika</span><span class="logo-sub">پوشاک مردانه · اصالت و کیفیت</span></div>
-</a>
-<nav class="nav-menu">
-<a href="#home">خانه</a><a href="#products">محصولات</a><a href="#story">داستان ما</a><a href="#magazine">مجله</a><a href="#contact">تماس با ما</a>
-</nav>
-<div class="header-actions">
-<button class="icon-btn" aria-label="جستجو" onclick="showToast('بخش جستجو به‌زودی فعال می‌شود')"><i class="fas fa-search"></i></button>
-<button class="icon-btn" aria-label="حساب کاربری" onclick="showToast('حساب کاربری به‌زودی فعال می‌شود')"><i class="fas fa-user"></i></button>
-<button class="icon-btn cart-badge" aria-label="سبد خرید" onclick="openCart()"><i class="fas fa-shopping-bag"></i><span class="badge" id="cartCount">0</span></button>
-</div>
-</div>
+ <div class="container header-inner">
+
+  <a href="#home" class="brand-link" aria-label="Gallery Harika">
+   <img src="logo.png" alt="لوگوی Gallery Harika" class="brand-logo"
+        onerror="this.classList.add('hidden')">
+   <div class="logo-block">
+    <div class="logo">Gallery <span>Harika</span></div>
+    <span class="logo-sub">پوشاک مردانه · اصالت و کیفیت</span>
+   </div>
+  </a>
+
+  <nav class="nav-menu" aria-label="منوی اصلی">
+   <a href="#home">خانه</a>
+   <a href="#products">محصولات</a>
+   <a href="#story">داستان ما</a>
+   <a href="#magazine">مجله</a>
+   <a href="#contact">تماس با ما</a>
+  </nav>
+
+  <div class="header-actions">
+   <button class="icon-btn" aria-label="جستجو" onclick="showToast('بخش جستجو به‌زودی فعال می‌شود')">
+    <i class="fas fa-search"></i>
+   </button>
+   <button class="icon-btn" aria-label="حساب کاربری" onclick="showToast('حساب کاربری به‌زودی فعال می‌شود')">
+    <i class="fas fa-user"></i>
+   </button>
+   <button class="icon-btn cart-badge" aria-label="سبد خرید" onclick="openCart()">
+    <i class="fas fa-shopping-bag"></i>
+    <span class="badge" id="cartCount">0</span>
+   </button>
+  </div>
+
+ </div>
 </header>
 
 <main id="home">
-<section class="hero"><div class="container">
-<h1><strong>Gallery Harika</strong> · پوشاکی برای مردان امروز</h1>
-<p>کیفیت بی‌نظیر، طراحی مدرن و قیمت منصفانه. مجموعه‌ای از تی‌شرت‌ها، پیراهن‌ها و پوشاک روزمره با اصالت ساخت ایران.</p>
-<a href="#products" class="btn-primary">مشاهده مجموعه <i class="fas fa-arrow-down"></i></a>
-</div></section>
+
+<section class="hero">
+ <div class="container">
+  <h1><strong>Gallery Harika</strong> · پوشاکی برای مردان امروز</h1>
+  <p>کیفیت بی‌نظیر، طراحی مدرن و قیمت منصفانه. مجموعه‌ای از تی‌شرت‌ها، پیراهن‌ها و پوشاک روزمره با اصالت ساخت ایران.</p>
+  <a href="#products" class="btn-primary">مشاهده مجموعه <i class="fas fa-arrow-down"></i></a>
+ </div>
+</section>
 
 <section class="container" id="products">
-<div class="section-title"><h2>محصولات <span>پرطرفدار</span></h2><p>انتخابی از بهترین‌های Gallery Harika برای استایل روزمره شما</p></div>
-<div class="product-grid">
+ <div class="section-title">
+  <h2>محصولات <span>پرطرفدار</span></h2>
+  <p>انتخابی از بهترین‌های Gallery Harika برای استایل روزمره شما</p>
+ </div>
 
-<article class="product-card" data-id="gh-001" data-name="تی‌شرت یقه‌دار کلاسیک" data-price="420000">
-<div class="product-image"><i class="fas fa-shirt"></i><span class="tag">پرفروش</span></div>
-<div class="product-info"><div class="brand">GALLERY HARIKA</div><h3>تی‌شرت یقه‌دار کلاسیک</h3><div class="price">۴۲۰,۰۰۰ تومان <span class="old">۵۶۰,۰۰۰</span></div><div class="rating">★★★★★ <span>(۱۲۴)</span></div><button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button></div>
-</article>
+ <div class="product-grid">
 
-<article class="product-card" data-id="gh-002" data-name="تی‌شرت طرح‌دار مینیمال" data-price="380000">
-<div class="product-image"><i class="fas fa-shirt"></i><span class="tag">جدید</span></div>
-<div class="product-info"><div class="brand">GALLERY HARIKA</div><h3>تی‌شرت طرح‌دار مینیمال</h3><div class="price">۳۸۰,۰۰۰ تومان</div><div class="rating">★★★★☆ <span>(۸۷)</span></div><button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button></div>
-</article>
+  <article class="product-card" data-id="gh-001" data-name="تی‌شرت یقه‌دار کلاسیک" data-price="420000">
+   <div class="product-image">
+    <i class="fas fa-shirt"></i><span class="tag">پرفروش</span>
+   </div>
+   <div class="product-info">
+    <div class="brand">GALLERY HARIKA</div>
+    <h3>تی‌شرت یقه‌دار کلاسیک</h3>
+    <div class="price">۴۲۰,۰۰۰ تومان <span class="old">۵۶۰,۰۰۰</span></div>
+    <div class="rating">★★★★★ <span>(۱۲۴)</span></div>
+    <button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button>
+   </div>
+  </article>
 
-<article class="product-card" data-id="gh-003" data-name="پیراهن کتان تابستانی" data-price="650000">
-<div class="product-image"><i class="fas fa-shirt"></i></div>
-<div class="product-info"><div class="brand">GALLERY HARIKA</div><h3>پیراهن کتان تابستانی</h3><div class="price">۶۵۰,۰۰۰ تومان <span class="old">۸۲۰,۰۰۰</span></div><div class="rating">★★★★★ <span>(۵۶)</span></div><button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button></div>
-</article>
+  <article class="product-card" data-id="gh-002" data-name="تی‌شرت طرح‌دار مینیمال" data-price="380000">
+   <div class="product-image">
+    <i class="fas fa-shirt"></i><span class="tag">جدید</span>
+   </div>
+   <div class="product-info">
+    <div class="brand">GALLERY HARIKA</div>
+    <h3>تی‌شرت طرح‌دار مینیمال</h3>
+    <div class="price">۳۸۰,۰۰۰ تومان</div>
+    <div class="rating">★★★★☆ <span>(۸۷)</span></div>
+    <button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button>
+   </div>
+  </article>
 
-<article class="product-card" data-id="gh-004" data-name="تی‌شرت یقه‌گرد ساده" data-price="350000">
-<div class="product-image"><i class="fas fa-shirt"></i></div>
-<div class="product-info"><div class="brand">GALLERY HARIKA</div><h3>تی‌شرت یقه‌گرد ساده</h3><div class="price">۳۵۰,۰۰۰ تومان</div><div class="rating">★★★★☆ <span>(۲۰۳)</span></div><button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button></div>
-</article>
+  <article class="product-card" data-id="gh-003" data-name="پیراهن کتان تابستانی" data-price="650000">
+   <div class="product-image">
+    <i class="fas fa-shirt"></i>
+   </div>
+   <div class="product-info">
+    <div class="brand">GALLERY HARIKA</div>
+    <h3>پیراهن کتان تابستانی</h3>
+    <div class="price">۶۵۰,۰۰۰ تومان <span class="old">۸۲۰,۰۰۰</span></div>
+    <div class="rating">★★★★★ <span>(۵۶)</span></div>
+    <button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button>
+   </div>
+  </article>
 
-</div></section>
+  <article class="product-card" data-id="gh-004" data-name="تی‌شرت یقه‌گرد ساده" data-price="350000">
+   <div class="product-image">
+    <i class="fas fa-shirt"></i>
+   </div>
+   <div class="product-info">
+    <div class="brand">GALLERY HARIKA</div>
+    <h3>تی‌شرت یقه‌گرد ساده</h3>
+    <div class="price">۳۵۰,۰۰۰ تومان</div>
+    <div class="rating">★★★★☆ <span>(۲۰۳)</span></div>
+    <button class="btn-add" onclick="addToCart(this.closest('.product-card'))">افزودن به سبد خرید</button>
+   </div>
+  </article>
 
-<section class="story-section" id="story"><div class="container">
-<div class="story-text"><h2>داستان <span>Gallery Harika</span></h2><p><strong>Gallery Harika</strong> در سال ۱۴۰۲ با یک ایده ساده اما قدرتمند متولد شد — ارائه پوشاک مردانه‌ای که تلفیقی از <strong>راحتی</strong> و <strong>سبک</strong> باشد.</p><p>با تکیه بر <strong>کیفیت پارچه</strong>، <strong>دوخت دقیق</strong> و <strong>طراحی مینیمال</strong>، هر محصول با توجه به جزئیات تولید می‌شود. ما به <strong>ساخت ایران</strong> افتخار می‌کنیم.</p><p><em>«پوشاکی برای مردانی که به جزئیات اهمیت می‌دهند.»</em></p></div>
-<div class="story-image"><i class="fas fa-store-alt"></i></div>
-</div></section>
+ </div>
+</section>
+
+<section class="story-section" id="story">
+ <div class="container story-grid">
+  <div class="story-text">
+   <h2>داستان <span>Gallery Harika</span></h2>
+   <p><strong>Gallery Harika</strong> در سال ۱۴۰۲ با یک ایده ساده اما قدرتمند متولد شد — ارائه پوشاک مردانه‌ای که تلفیقی از <strong>راحتی</strong> و <strong>سبک</strong> باشد.</p>
+   <p>با تکیه بر <strong>کیفیت پارچه</strong>، <strong>دوخت دقیق</strong> و <strong>طراحی مینیمال</strong>، هر محصول با توجه به جزئیات تولید می‌شود. ما به <strong>ساخت ایران</strong> افتخار می‌کنیم.</p>
+   <p><em>«پوشاکی برای مردانی که به جزئیات اهمیت می‌دهند.»</em></p>
+  </div>
+  <div class="story-image"><i class="fas fa-store-alt"></i></div>
+ </div>
+</section>
 
 <section class="container blog-preview" id="magazine">
-<div class="section-title"><h2>مجله <span>Gallery Harika</span></h2><p>جدیدترین مطالب درباره مد، استایل و کیفیت پوشاک مردانه</p></div>
-<div class="blog-grid">
-<article class="blog-card"><div class="date">۱۴۰۴/۰۲/۱۵</div><h3>چرا یک مرد باید حداقل ۳ تی‌شرت باکیفیت در کمد داشته باشد؟</h3><p>تی‌شرت‌های باکیفیت نه تنها ظاهر شما را متحول می‌کنند، بلکه دوام و راحتی بی‌نظیری دارند.</p><a href="#" class="read-more">بیشتر بخوانید ←</a></article>
-<article class="blog-card"><div class="date">۱۴۰۴/۰۲/۰۸</div><h3>راهنمای انتخاب پارچه مناسب برای تی‌شرت تابستانی</h3><p>از پنبه تا کتان و الیاف مدرن — هر پارچه‌ای برای یک فصل و کاربرد خاص مناسب است.</p><a href="#" class="read-more">بیشتر بخوانید ←</a></article>
-<article class="blog-card"><div class="date">۱۴۰۴/۰۲/۰۱</div><h3>۵ نکته طلایی برای ست کردن لباس‌های مردانه</h3><p>با رعایت چند اصل ساده می‌توانید استایل خود را به سطح بالاتری ببرید.</p><a href="#" class="read-more">بیشتر بخوانید ←</a></article>
-</div></section>
+ <div class="section-title">
+  <h2>مجله <span>Gallery Harika</span></h2>
+  <p>جدیدترین مطالب درباره مد، استایل و کیفیت پوشاک مردانه</p>
+ </div>
+ <div class="blog-grid">
+  <article class="blog-card">
+   <div class="date">۱۴۰۴/۰۲/۱۵</div>
+   <h3>چرا یک مرد باید حداقل ۳ تی‌شرت باکیفیت در کمد داشته باشد؟</h3>
+   <p>تی‌شرت‌های باکیفیت نه تنها ظاهر شما را متحول می‌کنند، بلکه دوام و راحتی بی‌نظیری دارند.</p>
+   <a href="#" class="read-more" onclick="return false">بیشتر بخوانید ←</a>
+  </article>
+  <article class="blog-card">
+   <div class="date">۱۴۰۴/۰۲/۰۸</div>
+   <h3>راهنمای انتخاب پارچه مناسب برای تی‌شرت تابستانی</h3>
+   <p>از پنبه تا کتان و الیاف مدرن — هر پارچه‌ای برای یک فصل و کاربرد خاص مناسب است.</p>
+   <a href="#" class="read-more" onclick="return false">بیشتر بخوانید ←</a>
+  </article>
+  <article class="blog-card">
+   <div class="date">۱۴۰۴/۰۲/۰۱</div>
+   <h3>۵ نکته طلایی برای ست کردن لباس‌های مردانه</h3>
+   <p>با رعایت چند اصل ساده می‌توانید استایل خود را به سطح بالاتری ببرید.</p>
+   <a href="#" class="read-more" onclick="return false">بیشتر بخوانید ←</a>
+  </article>
+ </div>
+</section>
+
 </main>
 
-<footer class="footer" id="contact"><div class="container">
-<div><h4>Gallery Harika</h4><p>پوشاک مردانه با اصالت و کیفیت</p><p style="margin-top:7px;color:#888"><i class="fas fa-map-pin"></i> تهران، خیابان ولیعصر<br><i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴-۵۶۷۸<br><i class="fas fa-envelope"></i> info@galleryharika.com</p></div>
-<div><h4>دسترسی سریع</h4><ul><li><a href="#home">خانه</a></li><li><a href="#products">محصولات</a></li><li><a href="#story">داستان ما</a></li><li><a href="#magazine">مجله</a></li><li><a href="#contact">تماس با ما</a></li></ul></div>
-<div><h4>خدمات مشتریان</h4><ul><li><a href="#">سوالات متداول</a></li><li><a href="#">رویه‌های بازگشت کالا</a></li><li><a href="#">راهنمای اندازه‌گیری</a></li><li><a href="#">قوانین و مقررات</a></li></ul></div>
-<div><h4>ما را دنبال کنید</h4><div class="social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-telegram"></i></a><a href="#"><i class="fab fa-whatsapp"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div><p style="margin-top:12px;color:#888">برای دریافت تخفیف‌های ویژه و اخبار جدید، ما را دنبال کنید.</p></div>
-</div><div class="footer-bottom">© ۱۴۰۴ تمامی حقوق برای <strong>Gallery Harika</strong> محفوظ است.</div></footer>
+<footer class="footer" id="contact">
+ <div class="container footer-grid">
+  <div>
+   <h4>Gallery Harika</h4>
+   <p>پوشاک مردانه با اصالت و کیفیت</p>
+   <p style="margin-top:7px;color:#888">
+    <i class="fas fa-map-pin"></i> تهران، خیابان ولیعصر<br>
+    <i class="fas fa-phone"></i> ۰۲۱-۱۲۳۴-۵۶۷۸<br>
+    <i class="fas fa-envelope"></i> info@galleryharika.com
+   </p>
+  </div>
+  <div>
+   <h4>دسترسی سریع</h4>
+   <ul>
+    <li><a href="#home">خانه</a></li>
+    <li><a href="#products">محصولات</a></li>
+    <li><a href="#story">داستان ما</a></li>
+    <li><a href="#magazine">مجله</a></li>
+    <li><a href="#contact">تماس با ما</a></li>
+   </ul>
+  </div>
+  <div>
+   <h4>خدمات مشتریان</h4>
+   <ul>
+    <li><a href="#" onclick="return false">سوالات متداول</a></li>
+    <li><a href="#" onclick="return false">رویه‌های بازگشت کالا</a></li>
+    <li><a href="#" onclick="return false">راهنمای اندازه‌گیری</a></li>
+    <li><a href="#" onclick="return false">قوانین و مقررات</a></li>
+   </ul>
+  </div>
+  <div>
+   <h4>ما را دنبال کنید</h4>
+   <div class="social">
+    <a href="#" onclick="return false"><i class="fab fa-instagram"></i></a>
+    <a href="#" onclick="return false"><i class="fab fa-telegram"></i></a>
+    <a href="#" onclick="return false"><i class="fab fa-whatsapp"></i></a>
+    <a href="#" onclick="return false"><i class="fab fa-youtube"></i></a>
+   </div>
+   <p style="margin-top:12px;color:#888">برای دریافت تخفیف‌های ویژه و اخبار جدید، ما را دنبال کنید.</p>
+  </div>
+ </div>
+ <div class="footer-bottom">© ۱۴۰۴ تمامی حقوق برای <strong>Gallery Harika</strong> محفوظ است.</div>
+</footer>
 
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
-<aside class="cart-drawer" id="cartDrawer">
-<div class="drawer-head"><h3><i class="fas fa-shopping-bag"></i> سبد خرید</h3><button class="close-btn" onclick="closeCart()"><i class="fas fa-times"></i></button></div>
-<div class="cart-items" id="cartItems"></div>
-<div class="drawer-foot"><div class="summary-row"><span>تعداد کالا</span><strong id="cartQuantity">۰</strong></div><div class="summary-row total"><span>مبلغ کل</span><span id="cartTotal">۰ تومان</span></div><button class="checkout-btn" onclick="openCheckout()">ادامه و ثبت سفارش</button></div>
+
+<aside class="cart-drawer" id="cartDrawer" aria-label="سبد خرید">
+ <div class="drawer-head">
+  <h3><i class="fas fa-shopping-bag"></i> سبد خرید</h3>
+  <button class="close-btn" onclick="closeCart()" aria-label="بستن"><i class="fas fa-times"></i></button>
+ </div>
+ <div class="cart-items" id="cartItems"></div>
+ <div class="drawer-foot">
+  <div class="summary-row"><span>تعداد کالا</span><strong id="cartQuantity">۰</strong></div>
+  <div class="summary-row total"><span>مبلغ کل</span><span id="cartTotal">۰ تومان</span></div>
+  <button class="checkout-btn" onclick="openCheckout()">ادامه و ثبت سفارش</button>
+ </div>
 </aside>
 
-<div class="modal" id="checkoutModal"><div class="modal-box">
-<div class="modal-head"><h3>ثبت سفارش Gallery Harika</h3><button class="close-btn" onclick="closeCheckout()"><i class="fas fa-times"></i></button></div>
-<div class="modal-body" id="checkoutContent">
-<form id="checkoutForm">
-<div class="form-grid">
-<div class="field"><label for="customerName">نام و نام خانوادگی *</label><input id="customerName" name="name" required autocomplete="name" placeholder="مثلاً علی احمدی"></div>
-<div class="field"><label for="customerPhone">شماره موبایل *</label><input id="customerPhone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷"></div>
-<div class="field full"><label for="customerAddress">آدرس کامل *</label><textarea id="customerAddress" name="address" required autocomplete="street-address" placeholder="استان، شهر، خیابان، پلاک، واحد..."></textarea></div>
-<div class="field full"><label for="customerNote">توضیحات سفارش</label><textarea id="customerNote" name="note" placeholder="توضیحات دلخواه"></textarea></div>
+<div class="modal" id="checkoutModal">
+ <div class="modal-box">
+  <div class="modal-head">
+   <h3>ثبت سفارش Gallery Harika</h3>
+   <button class="close-btn" onclick="closeCheckout()" aria-label="بستن"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="modal-body" id="checkoutContent">
+   <form id="checkoutForm">
+    <div class="form-grid">
+     <div class="field">
+      <label for="customerName">نام و نام خانوادگی *</label>
+      <input id="customerName" name="name" required autocomplete="name" placeholder="مثلاً علی احمدی">
+     </div>
+     <div class="field">
+      <label for="customerPhone">شماره موبایل *</label>
+      <input id="customerPhone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="۰۹۱۲۱۲۳۴۵۶۷">
+     </div>
+     <div class="field full">
+      <label for="customerAddress">آدرس کامل *</label>
+      <textarea id="customerAddress" name="address" required autocomplete="street-address" placeholder="استان، شهر، خیابان، پلاک، واحد..."></textarea>
+     </div>
+     <div class="field full">
+      <label for="customerNote">توضیحات سفارش</label>
+      <textarea id="customerNote" name="note" placeholder="توضیحات دلخواه"></textarea>
+     </div>
+    </div>
+
+    <div class="checkout-summary">
+     <div class="summary-row"><span>تعداد کالا</span><strong id="checkoutQuantity">۰</strong></div>
+     <div class="summary-row total"><span>مبلغ قابل پرداخت</span><strong id="checkoutTotal">۰ تومان</strong></div>
+    </div>
+
+    <button class="submit-order" id="submitOrderBtn" type="submit">
+     <i class="fas fa-check"></i> ثبت نهایی سفارش
+    </button>
+    <div class="error-text" id="checkoutError"></div>
+    <p class="notice">پس از ثبت موفق، شماره سفارش به شما نمایش داده می‌شود.</p>
+   </form>
+  </div>
+ </div>
 </div>
-<div class="checkout-summary"><div class="summary-row"><span>تعداد کالا</span><strong id="checkoutQuantity">۰</strong></div><div class="summary-row total"><span>مبلغ قابل پرداخت</span><strong id="checkoutTotal">۰ تومان</strong></div></div>
-<button class="submit-order" id="submitOrderBtn" type="submit"><i class="fas fa-check"></i> ثبت نهایی سفارش</button>
-<div class="error-text" id="checkoutError"></div><p class="notice">ثبت سفارش از طریق سرور فروشگاه انجام می‌شود.</p>
-</form></div></div></div>
+
 <div class="toast" id="toast"></div>
 
 <script>
+/*
+ * Gallery Harika
+ * Frontend -> Cloudflare Worker -> D1
+ *
+ * Worker base:
+ * https://gallery-harika-api.nimwmesfandiarii.workers.dev
+ *
+ * Order endpoint:
+ * /api/orders
+ */
 const API_URL="https://gallery-harika-api.nimwmesfandiarii.workers.dev/api/orders";
-const CART_KEY="galleryHarikaCart";
+const CART_KEY="gallery_harika_cart_v2";
+
 let cart=loadCart();
 
-function faDigits(v){return String(v).replace(/\d/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d])}
-function money(v){return faDigits(Number(v).toLocaleString("en-US"))+" تومان"}
-function loadCart(){try{const x=JSON.parse(localStorage.getItem(CART_KEY)||"[]");return Array.isArray(x)?x:[]}catch{return[]}}
-function saveCart(){localStorage.setItem(CART_KEY,JSON.stringify(cart))}
-function cartTotal(){return cart.reduce((s,x)=>s+x.price*x.qty,0)}
-function cartQty(){return cart.reduce((s,x)=>s+x.qty,0)}
-function updateCartBadge(){document.getElementById("cartCount").textContent=faDigits(cartQty());document.getElementById("cartQuantity").textContent=faDigits(cartQty());document.getElementById("cartTotal").textContent=money(cartTotal());document.getElementById("checkoutQuantity").textContent=faDigits(cartQty());document.getElementById("checkoutTotal").textContent=money(cartTotal())}
-function getImageFromCard(c){const i=c.querySelector(".product-image img");return i?i.src:""}
-function addToCart(card){const id=card.dataset.id,name=card.dataset.name,price=Number(card.dataset.price),image=getImageFromCard(card);const x=cart.find(i=>i.id===id);if(x)x.qty++;else cart.push({id,name,price,qty:1,image});saveCart();renderCart();updateCartBadge();showToast("محصول به سبد خرید اضافه شد")}
-function changeQty(id,d){const x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);saveCart();renderCart();updateCartBadge()}
-function removeItem(id){cart=cart.filter(i=>i.id!==id);saveCart();renderCart();updateCartBadge();showToast("محصول از سبد حذف شد")}
-function esc(v){return String(v).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;").replace(/'/g,"&#039;")}
-function escJs(v){return String(v).replace(/\/g,"\\").replace(/'/g,"\'")}
-function renderCart(){const box=document.getElementById("cartItems");if(!cart.length){box.innerHTML='<div class="empty-cart"><i class="fas fa-shopping-bag"></i><p>سبد خرید شما خالی است.</p></div>';return}box.innerHTML=cart.map(i=>`<div class="cart-item"><div class="cart-thumb">${i.image?`<img src="${esc(i.image)}" alt="">`:'<i class="fas fa-shirt"></i>'}</div><div><h4>${esc(i.name)}</h4><div class="cart-price">${money(i.price)}</div><div class="qty-controls"><button onclick="changeQty('${escJs(i.id)}',1)">+</button><strong>${faDigits(i.qty)}</strong><button onclick="changeQty('${escJs(i.id)}',-1)">−</button></div></div><button class="remove-item" onclick="removeItem('${escJs(i.id)}')"><i class="fas fa-trash"></i></button></div>`).join("")}
-function openCart(){renderCart();updateCartBadge();document.getElementById("cartDrawer").classList.add("open");document.getElementById("overlay").classList.add("show");document.body.classList.add("no-scroll")}
-function closeCart(){document.getElementById("cartDrawer").classList.remove("open");document.getElementById("overlay").classList.remove("show");if(!document.getElementById("checkoutModal").classList.contains("show"))document.body.classList.remove("no-scroll")}
-function openCheckout(){if(!cart.length){showToast("ابتدا یک محصول به سبد اضافه کنید");return}closeCart();document.getElementById("checkoutError").classList.remove("show");document.getElementById("checkoutModal").classList.add("show");document.body.classList.add("no-scroll")}
-function closeCheckout(){document.getElementById("checkoutModal").classList.remove("show");document.body.classList.remove("no-scroll")}
-document.getElementById("checkoutModal").addEventListener("click",e=>{if(e.target===e.currentTarget)closeCheckout()});
+function faDigits(value){
+ return String(value).replace(/[0-9]/g,d=>"۰۱۲۳۴۵۶۷۸۹"[d]);
+}
 
-document.getElementById("checkoutForm").addEventListener("submit",async function(e){
-e.preventDefault();if(!cart.length){showCheckoutError("سبد خرید خالی است.");return}
-const btn=document.getElementById("submitOrderBtn"),form=new FormData(this),customer={name:normalizeDigits(String(form.get("name")||"").trim()),phone:normalizeDigits(String(form.get("phone")||"").trim()),address:String(form.get("address")||"").trim(),note:String(form.get("note")||"").trim()};
-if(!customer.name||!customer.phone||!customer.address){showCheckoutError("لطفاً اطلاعات ضروری را کامل وارد کنید.");return}
-if(customer.phone.replace(/[^0-9]/g,"").length<10){showCheckoutError("شماره موبایل واردشده معتبر نیست.");return}
-btn.disabled=true;btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> در حال ثبت سفارش...';document.getElementById("checkoutError").classList.remove("show");
-try{
-const res=await fetch(API_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({customer,items:cart.map(i=>({id:i.id,name:i.name,price:i.price,qty:i.qty})),total:cartTotal()})});
-const data=await res.json().catch(()=>null);if(!res.ok||!data||!data.success)throw new Error(data?.message||"ثبت سفارش انجام نشد.");
-const code=data.order?.code||"ثبت شد";cart=[];saveCart();renderCart();updateCartBadge();this.reset();
-document.getElementById("checkoutContent").innerHTML=`<div class="success-box"><i class="fas fa-circle-check"></i><h3>سفارش شما با موفقیت ثبت شد 🎉</h3><div class="order-code">شماره سفارش: ${esc(code)}</div><p>اطلاعات سفارش شما با موفقیت در سیستم فروشگاه ثبت شد.</p><p class="notice">این شماره سفارش را برای پیگیری نزد خود نگه دارید.</p><button class="btn-primary" style="margin-top:18px" onclick="closeCheckout()">بازگشت به فروشگاه</button></div>`;
-}catch(err){console.error(err);showCheckoutError("ثبت سفارش انجام نشد. اتصال اینترنت و اطلاعات واردشده را بررسی کنید و دوباره تلاش کنید.")}
-finally{btn.disabled=false;btn.innerHTML='<i class="fas fa-check"></i> ثبت نهایی سفارش'}
+function normalizeDigits(value){
+ return String(value)
+  .replace(/[۰-۹]/g,d=>"۰۱۲۳۴۵۶۷۸۹".indexOf(d))
+  .replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d));
+}
+
+function money(value){
+ return faDigits(Number(value||0).toLocaleString("en-US"))+" تومان";
+}
+
+function loadCart(){
+ try{
+  const saved=JSON.parse(localStorage.getItem(CART_KEY)||"[]");
+  return Array.isArray(saved)?saved:[];
+ }catch(e){
+  return [];
+ }
+}
+
+function saveCart(){
+ localStorage.setItem(CART_KEY,JSON.stringify(cart));
+}
+
+function cartQty(){
+ return cart.reduce((sum,item)=>sum+Number(item.qty||0),0);
+}
+
+function cartTotal(){
+ return cart.reduce((sum,item)=>sum+(Number(item.price)||0)*(Number(item.qty)||0),0);
+}
+
+function updateCartUI(){
+ const qty=cartQty();
+ const total=cartTotal();
+
+ document.getElementById("cartCount").textContent=faDigits(qty);
+ document.getElementById("cartQuantity").textContent=faDigits(qty);
+ document.getElementById("cartTotal").textContent=money(total);
+ document.getElementById("checkoutQuantity").textContent=faDigits(qty);
+ document.getElementById("checkoutTotal").textContent=money(total);
+}
+
+function getProductImage(card){
+ const image=card.querySelector(".product-image img");
+ return image ? image.getAttribute("src") : "";
+}
+
+function addToCart(card){
+ if(!card)return;
+
+ const id=card.dataset.id;
+ const name=card.dataset.name;
+ const price=Number(card.dataset.price);
+ const image=getProductImage(card);
+
+ const existing=cart.find(item=>item.id===id);
+
+ if(existing){
+  existing.qty+=1;
+ }else{
+  cart.push({id,name,price,qty:1,image});
+ }
+
+ saveCart();
+ renderCart();
+ updateCartUI();
+ showToast("محصول به سبد خرید اضافه شد");
+}
+
+function changeQty(id,direction){
+ const item=cart.find(x=>x.id===id);
+ if(!item)return;
+
+ item.qty+=direction;
+
+ if(item.qty<=0){
+  cart=cart.filter(x=>x.id!==id);
+ }
+
+ saveCart();
+ renderCart();
+ updateCartUI();
+}
+
+function removeItem(id){
+ cart=cart.filter(x=>x.id!==id);
+ saveCart();
+ renderCart();
+ updateCartUI();
+ showToast("محصول از سبد حذف شد");
+}
+
+function escapeHTML(value){
+ return String(value)
+  .replace(/&/g,"&amp;")
+  .replace(/</g,"&lt;")
+  .replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;")
+  .replace(/'/g,"&#039;");
+}
+
+function renderCart(){
+ const box=document.getElementById("cartItems");
+
+ if(cart.length===0){
+  box.innerHTML='<div class="empty-cart"><i class="fas fa-shopping-bag"></i><p>سبد خرید شما خالی است.</p></div>';
+  return;
+ }
+
+ box.innerHTML=cart.map(item=>{
+  const safeId=escapeHTML(item.id);
+  const thumb=item.image
+   ? '<img src="'+escapeHTML(item.image)+'" alt="">'
+   : '<i class="fas fa-shirt"></i>';
+
+  return `
+   <div class="cart-item">
+    <div class="cart-thumb">${thumb}</div>
+    <div>
+     <h4>${escapeHTML(item.name)}</h4>
+     <div class="cart-price">${money(item.price)}</div>
+     <div class="qty-controls">
+      <button type="button" onclick="changeQty('${safeId}',1)">+</button>
+      <strong>${faDigits(item.qty)}</strong>
+      <button type="button" onclick="changeQty('${safeId}',-1)">−</button>
+     </div>
+    </div>
+    <button class="remove-item" type="button" onclick="removeItem('${safeId}')" aria-label="حذف">
+     <i class="fas fa-trash"></i>
+    </button>
+   </div>
+  `;
+ }).join("");
+}
+
+function openCart(){
+ renderCart();
+ updateCartUI();
+ document.getElementById("cartDrawer").classList.add("open");
+ document.getElementById("overlay").classList.add("show");
+ document.body.classList.add("locked");
+}
+
+function closeCart(){
+ document.getElementById("cartDrawer").classList.remove("open");
+ document.getElementById("overlay").classList.remove("show");
+
+ if(!document.getElementById("checkoutModal").classList.contains("show")){
+  document.body.classList.remove("locked");
+ }
+}
+
+function openCheckout(){
+ if(cart.length===0){
+  showToast("سبد خرید شما خالی است");
+  return;
+ }
+
+ updateCartUI();
+ closeCart();
+
+ document.getElementById("checkoutError").classList.remove("show");
+ document.getElementById("checkoutModal").classList.add("show");
+ document.body.classList.add("locked");
+}
+
+function closeCheckout(){
+ document.getElementById("checkoutModal").classList.remove("show");
+ document.body.classList.remove("locked");
+}
+
+document.getElementById("checkoutModal").addEventListener("click",function(event){
+ if(event.target===this)closeCheckout();
 });
 
-function showCheckoutError(m){const b=document.getElementById("checkoutError");b.textContent=m;b.classList.add("show")}
-function normalizeDigits(v){return String(v).replace(/[۰-۹]/g,d=>"۰۱۲۳۴۵۶۷۸۹".indexOf(d)).replace(/[٠-٩]/g,d=>"٠١٢٣٤٥٦٧٨٩".indexOf(d))}
-let toastTimer;function showToast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2200)}
-document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener("click",e=>{if(a.classList.contains("read-more")){e.preventDefault();showToast("مقاله به‌زودی منتشر می‌شود")}}));
-renderCart();updateCartBadge();
+document.addEventListener("keydown",function(event){
+ if(event.key==="Escape"){
+  closeCart();
+  closeCheckout();
+ }
+});
+
+function showCheckoutError(message){
+ const el=document.getElementById("checkoutError");
+ el.textContent=message;
+ el.classList.add("show");
+}
+
+document.getElementById("checkoutForm").addEventListener("submit",async function(event){
+ event.preventDefault();
+
+ if(cart.length===0){
+  showCheckoutError("سبد خرید خالی است.");
+  return;
+ }
+
+ const button=document.getElementById("submitOrderBtn");
+ const error=document.getElementById("checkoutError");
+ const formData=new FormData(this);
+
+ const customer={
+  name:String(formData.get("name")||"").trim(),
+  phone:normalizeDigits(String(formData.get("phone")||"").trim()),
+  address:String(formData.get("address")||"").trim(),
+  note:String(formData.get("note")||"").trim()
+ };
+
+ if(!customer.name||!customer.phone||!customer.address){
+  showCheckoutError("لطفاً نام، شماره موبایل و آدرس را کامل وارد کنید.");
+  return;
+ }
+
+ const phoneDigits=customer.phone.replace(/\D/g,"");
+ if(phoneDigits.length<10){
+  showCheckoutError("شماره موبایل واردشده معتبر نیست.");
+  return;
+ }
+
+ const payload={
+  customer,
+  items:cart.map(item=>({
+   id:item.id,
+   name:item.name,
+   price:Number(item.price),
+   qty:Number(item.qty)
+  })),
+  total:cartTotal()
+ };
+
+ button.disabled=true;
+ button.innerHTML='<i class="fas fa-spinner fa-spin"></i> در حال ثبت سفارش...';
+ error.classList.remove("show");
+
+ try{
+  const response=await fetch(API_URL,{
+   method:"POST",
+   headers:{"Content-Type":"application/json"},
+   body:JSON.stringify(payload)
+  });
+
+  const data=await response.json().catch(()=>null);
+
+  if(!response.ok || !data || data.success!==true){
+   throw new Error(data && data.message ? data.message : "ثبت سفارش انجام نشد");
+  }
+
+  const orderCode=data.order && (data.order.code || data.order.id)
+   ? (data.order.code || data.order.id)
+   : "ثبت شد";
+
+  cart=[];
+  saveCart();
+  renderCart();
+  updateCartUI();
+  this.reset();
+
+  document.getElementById("checkoutContent").innerHTML=`
+   <div class="success-box">
+    <i class="fas fa-circle-check"></i>
+    <h3>سفارش شما با موفقیت ثبت شد 🎉</h3>
+    <div class="order-code">شماره سفارش: ${escapeHTML(orderCode)}</div>
+    <p>اطلاعات سفارش شما با موفقیت در سیستم فروشگاه ثبت شد.</p>
+    <p class="notice">این شماره سفارش را برای پیگیری نزد خود نگه دارید.</p>
+    <button class="btn-primary" style="margin-top:18px" type="button" onclick="closeCheckout()">
+     بازگشت به فروشگاه
+    </button>
+   </div>
+  `;
+
+ }catch(error){
+  console.error("ORDER ERROR:",error);
+  showCheckoutError(
+   "ثبت سفارش انجام نشد. اتصال اینترنت یا سرویس ثبت سفارش را بررسی کنید و دوباره تلاش کنید."
+  );
+ }finally{
+  button.disabled=false;
+  button.innerHTML='<i class="fas fa-check"></i> ثبت نهایی سفارش';
+ }
+});
+
+function showToast(message){
+ const toast=document.getElementById("toast");
+ toast.textContent=message;
+ toast.classList.add("show");
+
+ clearTimeout(window.__toastTimer);
+ window.__toastTimer=setTimeout(()=>{
+  toast.classList.remove("show");
+ },2200);
+}
+
+renderCart();
+updateCartUI();
 </script>
+
 </body>
 </html>
