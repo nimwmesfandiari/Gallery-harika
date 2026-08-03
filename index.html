@@ -3,53 +3,28 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Gallery Harika - فروشگاه پوشاک مردانه با طراحی مدرن و کیفیت ایرانی" />
     <title>Gallery Harika | فروشگاه پوشاک مردانه</title>
 
     <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-
-    <!-- Persian fashion-style font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Estedad:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <style>
-        /* =========================================================
-           RESET & BASE
-        ========================================================= */
+        /* ===== RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: "Estedad", Tahoma, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #f8f6f2;
             color: #1e1e1e;
-            line-height: 1.9;
-            direction: rtl;
-            text-align: center;
-            overflow-x: hidden;
+            line-height: 1.6;
         }
 
-        body,
-        button,
-        input,
-        textarea,
-        select {
-            font-family: "Estedad", Tahoma, Arial, sans-serif;
+        body.cart-open {
+            overflow: hidden;
         }
 
         a {
@@ -61,35 +36,29 @@
             list-style: none;
         }
 
-        button {
-            border: 0;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
+        button,
+        input {
+            font-family: inherit;
         }
 
         .container {
-            width: min(1280px, calc(100% - 40px));
+            max-width: 1280px;
             margin: 0 auto;
+            padding: 0 20px;
         }
 
-        /* =========================================================
-           TOP BANNER
-        ========================================================= */
+        /* ===== TOP BANNER ===== */
         .top-banner {
-            background: #191919;
+            background: #1a1a1a;
             color: #f5f0e8;
-            padding: 12px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px 35px;
-            font-size: 0.82rem;
-            font-weight: 400;
             text-align: center;
+            padding: 10px 20px;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px 30px;
         }
 
         .top-banner span {
@@ -97,58 +66,34 @@
         }
 
         .top-banner .highlight {
-            color: #d6ae4c;
-            font-weight: 700;
+            color: #e8b84b;
+            font-weight: 600;
         }
 
-        /* =========================================================
-           HEADER
-        ========================================================= */
+        /* ===== HEADER ===== */
         .header {
+            background: #ffffff;
+            border-bottom: 1px solid #eae5dc;
+            padding: 15px 0;
             position: sticky;
             top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #eae5dc;
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.04);
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .header .container {
-            min-height: 245px;
-            padding: 18px 0 22px;
             display: flex;
-            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            gap: 13px;
-        }
-
-        /* Logo is intentionally small and above Gallery Harika */
-        .brand-block {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-            line-height: 1;
-        }
-
-        .brand-logo {
-            width: 62px;
-            height: 62px;
-            object-fit: contain;
-            margin-bottom: 2px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: clamp(1.55rem, 3vw, 2.25rem);
-            font-weight: 800;
+            font-size: 1.8rem;
+            font-weight: 700;
             letter-spacing: 2px;
-            color: #171717;
-            line-height: 1.15;
-            direction: ltr;
+            color: #1a1a1a;
         }
 
         .logo span {
@@ -156,217 +101,154 @@
         }
 
         .logo-sub {
-            font-family: "Estedad", Tahoma, sans-serif;
-            font-size: 0.72rem;
-            font-weight: 400;
-            letter-spacing: 1.8px;
-            color: #8a8a8a;
-            margin-top: 5px;
-            line-height: 1.7;
+            font-size: 0.7rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            color: #888;
+            display: block;
+            margin-top: -4px;
         }
 
         .nav-menu {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 12px 30px;
-            font-size: 0.92rem;
+            gap: 28px;
             font-weight: 500;
-            color: #242424;
+            font-size: 0.95rem;
         }
 
         .nav-menu a {
-            position: relative;
-            padding: 5px 2px;
-            transition: color 0.25s ease;
-        }
-
-        .nav-menu a::after {
-            content: "";
-            position: absolute;
-            right: 50%;
-            bottom: -2px;
-            width: 0;
-            height: 2px;
-            background: #c9a84c;
-            transform: translateX(50%);
-            transition: width 0.25s ease;
+            transition: color 0.2s;
         }
 
         .nav-menu a:hover {
             color: #c9a84c;
         }
 
-        .nav-menu a:hover::after {
-            width: 70%;
-        }
-
         .header-actions {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 20px;
             font-size: 1.1rem;
-            color: #222;
         }
 
-        .icon-button {
-            position: relative;
-            width: 38px;
-            height: 38px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-            color: inherit;
+        .header-actions i {
             cursor: pointer;
-            border-radius: 50%;
-            transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+            transition: color 0.2s;
         }
 
-        .icon-button:hover {
+        .header-actions i:hover {
             color: #c9a84c;
-            background: #f8f4ea;
-            transform: translateY(-1px);
         }
 
         .cart-badge {
             position: relative;
+            cursor: pointer;
         }
 
         .cart-badge .badge {
             position: absolute;
-            top: -3px;
-            right: -4px;
+            top: -8px;
+            right: -10px;
+            background: #c9a84c;
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
             min-width: 18px;
             height: 18px;
             padding: 0 4px;
-            border-radius: 999px;
-            background: #c9a84c;
-            color: #fff;
-            font-size: 0.62rem;
-            font-weight: 700;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            line-height: 1;
         }
 
-        /* =========================================================
-           HERO
-        ========================================================= */
+        /* ===== HERO SECTION ===== */
         .hero {
             background: linear-gradient(135deg, #f0ebe2 0%, #e8e0d4 100%);
-            padding: 72px 0 65px;
+            padding: 70px 0 60px;
+            text-align: center;
             border-bottom: 1px solid #e0d8cc;
         }
 
-        .hero .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
         .hero h1 {
-            max-width: 1050px;
-            font-size: clamp(1.7rem, 4vw, 3rem);
-            font-weight: 400;
-            letter-spacing: 1px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            text-align: center;
+            font-size: 2.8rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 12px;
         }
 
         .hero h1 strong {
-            font-weight: 800;
-            color: #191919;
-            direction: ltr;
-            display: inline-block;
+            font-weight: 700;
+            color: #1a1a1a;
         }
 
         .hero p {
-            max-width: 760px;
-            margin: 0 auto 30px;
+            font-size: 1.1rem;
             color: #555;
-            font-size: 1.02rem;
-            font-weight: 400;
-            line-height: 2.1;
-            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-weight: 300;
         }
 
         .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 230px;
-            min-height: 55px;
-            padding: 12px 38px;
-            background: #191919;
+            background: #1a1a1a;
             color: #fff;
-            font-size: 0.92rem;
+            padding: 14px 48px;
+            border: none;
+            font-size: 0.95rem;
             font-weight: 600;
-            letter-spacing: 0.5px;
+            letter-spacing: 2px;
             cursor: pointer;
-            transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+            transition: background 0.3s, transform 0.1s;
+            display: inline-block;
         }
 
         .btn-primary:hover {
             background: #c9a84c;
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(201, 168, 76, 0.22);
         }
 
-        /* =========================================================
-           SECTION TITLE
-        ========================================================= */
+        /* ===== SECTION TITLE ===== */
         .section-title {
             text-align: center;
-            margin: 70px auto 42px;
-            max-width: 900px;
+            margin: 60px 0 40px;
         }
 
         .section-title h2 {
-            font-size: clamp(1.55rem, 3vw, 2.25rem);
-            font-weight: 400;
-            letter-spacing: 1px;
-            line-height: 1.7;
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 3px;
         }
 
         .section-title h2 span {
-            font-weight: 800;
+            font-weight: 700;
         }
 
         .section-title p {
-            color: #8a8a8a;
+            color: #888;
             font-size: 0.95rem;
-            margin-top: 8px;
-            line-height: 2;
+            margin-top: 6px;
         }
 
-        /* =========================================================
-           PRODUCT GRID
-        ========================================================= */
+        /* ===== PRODUCT GRID ===== */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 25px;
-            margin-bottom: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 20px;
         }
 
         .product-card {
-            background: #fff;
-            border: 1px solid #eeeae3;
-            border-radius: 8px;
+            background: #ffffff;
+            border-radius: 4px;
             overflow: hidden;
-            text-align: center;
-            transition: box-shadow 0.3s ease, transform 0.25s ease;
+            transition: box-shadow 0.3s, transform 0.2s;
+            border: 1px solid #eeeae3;
         }
 
         .product-card:hover {
-            box-shadow: 0 14px 35px rgba(0, 0, 0, 0.09);
-            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
         }
 
         .product-image {
@@ -375,21 +257,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            color: #c8c4bd;
             font-size: 4rem;
+            color: #ccc;
+            position: relative;
         }
 
         .product-image .tag {
             position: absolute;
-            top: 13px;
-            right: 13px;
+            top: 12px;
+            right: 12px;
             background: #c9a84c;
             color: #fff;
-            font-size: 0.67rem;
+            font-size: 0.65rem;
             font-weight: 700;
-            padding: 4px 13px;
-            border-radius: 999px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
         }
 
         .product-info {
@@ -397,65 +280,55 @@
         }
 
         .product-info .brand {
-            color: #aaa;
-            font-size: 0.67rem;
+            font-size: 0.7rem;
             font-weight: 600;
-            letter-spacing: 1.5px;
-            direction: ltr;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #aaa;
         }
 
         .product-info h3 {
-            margin: 7px 0 9px;
-            font-size: 0.98rem;
-            font-weight: 600;
-            line-height: 1.8;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 6px 0 8px;
         }
 
-        .price {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 7px;
-            font-size: 1.05rem;
-            font-weight: 800;
+        .product-info .price {
+            font-size: 1.15rem;
+            font-weight: 700;
             color: #1a1a1a;
         }
 
-        .price .old {
+        .product-info .price .old {
+            font-weight: 300;
             color: #aaa;
-            font-size: 0.8rem;
-            font-weight: 400;
             text-decoration: line-through;
+            margin-left: 8px;
+            font-size: 0.85rem;
         }
 
-        .rating {
-            color: #e1b54f;
-            font-size: 0.78rem;
-            margin-top: 7px;
-            direction: ltr;
+        .product-info .rating {
+            color: #e8b84b;
+            font-size: 0.8rem;
+            margin-top: 6px;
         }
 
-        .rating span {
+        .product-info .rating span {
             color: #888;
-            font-weight: 400;
-            direction: rtl;
-            display: inline-block;
-            margin-left: 3px;
+            font-weight: 300;
         }
 
         .btn-add {
-            width: 100%;
-            margin-top: 13px;
-            padding: 9px 18px;
+            margin-top: 12px;
             background: transparent;
             border: 1.5px solid #1a1a1a;
-            border-radius: 999px;
-            color: #1a1a1a;
-            font-size: 0.78rem;
+            padding: 8px 20px;
             font-weight: 600;
+            font-size: 0.8rem;
             cursor: pointer;
-            transition: all 0.25s ease;
+            transition: all 0.25s;
+            width: 100%;
+            border-radius: 30px;
         }
 
         .btn-add:hover {
@@ -463,13 +336,17 @@
             color: #fff;
         }
 
-        /* =========================================================
-           STORY
-        ========================================================= */
+        .btn-add.added {
+            background: #c9a84c;
+            border-color: #c9a84c;
+            color: #fff;
+        }
+
+        /* ===== STORY SECTION ===== */
         .story-section {
-            margin-top: 70px;
-            padding: 75px 0;
-            background: #fff;
+            background: #ffffff;
+            padding: 70px 0;
+            margin-top: 60px;
             border-top: 1px solid #eeeae3;
             border-bottom: 1px solid #eeeae3;
         }
@@ -477,158 +354,121 @@
         .story-section .container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 55px;
+            gap: 50px;
             align-items: center;
         }
 
-        .story-text {
-            text-align: center;
+        .story-section .story-text h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
         }
 
-        .story-text h2 {
-            font-size: clamp(1.6rem, 3vw, 2.25rem);
-            font-weight: 400;
-            margin-bottom: 22px;
-            line-height: 1.7;
+        .story-section .story-text h2 span {
+            font-weight: 700;
         }
 
-        .story-text h2 span {
-            font-weight: 800;
-        }
-
-        .story-text p {
-            max-width: 650px;
-            margin: 0 auto 16px;
+        .story-section .story-text p {
             color: #555;
-            font-size: 0.98rem;
-            font-weight: 400;
-            line-height: 2.15;
-            text-align: center;
+            margin-bottom: 16px;
+            font-weight: 300;
+            line-height: 1.8;
         }
 
-        .story-text em {
-            color: #9a7d34;
-            font-weight: 500;
-        }
-
-        .story-image {
-            min-height: 320px;
-            background: linear-gradient(135deg, #eee7db, #e5ddcf);
-            border-radius: 8px;
+        .story-section .story-image {
+            background: #e8e0d4;
+            height: 320px;
+            border-radius: 4px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #b8b1a4;
             font-size: 5rem;
+            color: #bbb;
         }
 
-        /* =========================================================
-           BLOG
-        ========================================================= */
+        /* ===== BLOG PREVIEW ===== */
         .blog-preview {
-            padding: 40px 0 70px;
+            padding: 40px 0 60px;
         }
 
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
         .blog-card {
             background: #fff;
             border: 1px solid #eeeae3;
-            border-radius: 8px;
-            padding: 25px 27px;
-            text-align: center;
-            transition: box-shadow 0.3s ease, transform 0.25s ease;
+            border-radius: 4px;
+            padding: 24px 28px;
+            transition: box-shadow 0.3s;
         }
 
         .blog-card:hover {
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.07);
-            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
         }
 
         .blog-card .date {
+            font-size: 0.75rem;
             color: #aaa;
-            font-size: 0.72rem;
-            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .blog-card h3 {
-            margin: 11px 0 12px;
-            font-size: 1.02rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            line-height: 1.9;
+            margin: 10px 0 12px;
         }
 
         .blog-card p {
             color: #666;
-            font-size: 0.9rem;
-            font-weight: 400;
-            line-height: 2;
+            font-weight: 300;
+            font-size: 0.95rem;
         }
 
         .blog-card .read-more {
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 14px;
+            font-weight: 600;
+            font-size: 0.85rem;
             color: #c9a84c;
-            font-size: 0.84rem;
-            font-weight: 700;
-            transition: color 0.2s ease;
+            transition: color 0.2s;
         }
 
         .blog-card .read-more:hover {
             color: #1a1a1a;
         }
 
-        /* =========================================================
-           FOOTER
-        ========================================================= */
+        /* ===== FOOTER ===== */
         .footer {
-            margin-top: 10px;
-            padding: 55px 0 28px;
-            background: #191919;
+            background: #1a1a1a;
             color: #ccc;
-            text-align: center;
+            padding: 50px 0 30px;
+            margin-top: 40px;
         }
 
         .footer .container {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 35px;
-        }
-
-        .footer-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 40px;
         }
 
         .footer h4 {
             color: #fff;
-            font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 14px;
+            font-size: 1rem;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
         }
 
         .footer p,
         .footer li {
-            color: #ccc;
-            font-size: 0.86rem;
-            font-weight: 400;
-            line-height: 2.2;
-        }
-
-        .footer ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 2px;
-        }
-
-        .footer a {
-            transition: color 0.2s ease;
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 2;
         }
 
         .footer a:hover {
@@ -637,200 +477,430 @@
 
         .footer .social {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-top: 5px;
+            gap: 16px;
+            font-size: 1.3rem;
+            margin-top: 8px;
         }
 
-        .footer .social a {
-            width: 38px;
-            height: 38px;
-            border: 1px solid #3c3c3c;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ccc;
-            transition: all 0.2s ease;
+        .footer .social i {
+            cursor: pointer;
+            transition: color 0.2s;
         }
 
-        .footer .social a:hover {
+        .footer .social i:hover {
             color: #c9a84c;
-            border-color: #c9a84c;
-            transform: translateY(-2px);
         }
 
         .footer-bottom {
-            width: min(1180px, calc(100% - 40px));
-            margin: 40px auto 0;
-            padding-top: 20px;
             border-top: 1px solid #333;
+            margin-top: 40px;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
             color: #777;
-            font-size: 0.76rem;
+            letter-spacing: 0.5px;
         }
 
         /* =========================================================
-           RESPONSIVE
+           SHOPPING CART
         ========================================================= */
-        @media (max-width: 1000px) {
-            .product-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        .cart-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 99999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+            backdrop-filter: blur(4px);
+        }
+
+        .cart-overlay.active {
+            display: flex;
+        }
+
+        .cart-modal {
+            width: min(540px, 100%);
+            max-height: 90vh;
+            overflow-y: auto;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+            direction: rtl;
+            text-align: right;
+            animation: cartIn 0.25s ease;
+        }
+
+        @keyframes cartIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px) scale(0.98);
             }
 
-            .blog-grid {
-                grid-template-columns: 1fr;
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .cart-header {
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-header h2 {
+            margin: 0;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .cart-header h2 i {
+            margin-left: 6px;
+            color: #c9a84c;
+        }
+
+        .cart-close {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 0;
+            background: #f5f3ef;
+            color: #222;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-close:hover {
+            background: #191919;
+            color: #fff;
+        }
+
+        .cart-body {
+            padding: 15px 20px;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 45px 15px;
+            color: #777;
+        }
+
+        .empty-cart i {
+            display: block;
+            font-size: 3rem;
+            color: #c9a84c;
+            margin-bottom: 15px;
+        }
+
+        .empty-cart strong {
+            display: block;
+            color: #222;
+            font-size: 1rem;
+            margin-bottom: 7px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 58px 1fr auto;
+            gap: 12px;
+            align-items: center;
+            padding: 14px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item:last-child {
+            border-bottom: 0;
+        }
+
+        .cart-product-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 8px;
+            background: #f0ece4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #b9b2a7;
+            font-size: 1.5rem;
+        }
+
+        .cart-product-info {
+            min-width: 0;
+        }
+
+        .cart-product-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #222;
+            line-height: 1.7;
+            margin-bottom: 4px;
+        }
+
+        .cart-product-price {
+            font-size: 0.78rem;
+            color: #777;
+        }
+
+        .cart-quantity {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin-top: 7px;
+        }
+
+        .cart-quantity button {
+            width: 27px;
+            height: 27px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background: #fff;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-quantity button:hover {
+            background: #191919;
+            color: #fff;
+            border-color: #191919;
+        }
+
+        .cart-quantity span {
+            min-width: 20px;
+            text-align: center;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        .cart-item-total {
+            text-align: left;
+            white-space: nowrap;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #222;
+        }
+
+        .cart-remove {
+            display: block;
+            margin-top: 6px;
+            border: 0;
+            background: transparent;
+            color: #999;
+            cursor: pointer;
+            font-size: 0.7rem;
+        }
+
+        .cart-remove:hover {
+            color: #c0392b;
+        }
+
+        .cart-footer {
+            position: sticky;
+            bottom: 0;
+            background: #fff;
+            border-top: 1px solid #eee;
+            padding: 18px 20px 20px;
+        }
+
+        .cart-summary-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .cart-summary-row strong {
+            font-size: 1.05rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            min-height: 50px;
+            border: 0;
+            background: #191919;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #c9a84c;
+        }
+
+        .clear-cart-btn {
+            width: 100%;
+            margin-top: 9px;
+            padding: 8px;
+            border: 0;
+            background: transparent;
+            color: #999;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.75rem;
+        }
+
+        .clear-cart-btn:hover {
+            color: #c0392b;
+        }
+
+        /* ===== CART TOAST ===== */
+        .cart-toast {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            z-index: 100000;
+            background: #191919;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(15px);
+            pointer-events: none;
+            transition: all 0.25s ease;
+        }
+
+        .cart-toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header .container {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
             }
 
-            .footer .container {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+            .logo {
+                text-align: center;
+            }
+
+            .nav-menu {
+                justify-content: center;
+                gap: 18px;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+            }
+
+            .header-actions {
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
             }
 
             .story-section .container {
                 grid-template-columns: 1fr;
+                gap: 30px;
             }
 
-            .story-image {
-                order: -1;
+            .story-section .story-image {
+                height: 200px;
             }
-        }
 
-        @media (max-width: 768px) {
-            .container {
-                width: min(100% - 28px, 700px);
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 16px;
             }
 
             .top-banner {
-                padding: 9px 12px;
-                gap: 5px 15px;
                 font-size: 0.7rem;
-                line-height: 1.8;
+                padding: 8px 12px;
+                gap: 4px 16px;
             }
 
-            .header .container {
-                min-height: 220px;
-                padding: 15px 0 18px;
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
             }
 
-            .brand-logo {
+            .product-image {
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            .product-info {
+                padding: 12px 14px 16px;
+            }
+
+            .product-info h3 {
+                font-size: 0.85rem;
+            }
+
+            .btn-add {
+                font-size: 0.7rem;
+                padding: 6px 12px;
+            }
+
+            .hero {
+                padding: 40px 0 35px;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .btn-primary {
+                padding: 12px 30px;
+                font-size: 0.85rem;
+            }
+
+            .cart-overlay {
+                padding: 0;
+                align-items: flex-end;
+            }
+
+            .cart-modal {
+                width: 100%;
+                max-height: 92vh;
+                border-radius: 18px 18px 0 0;
+            }
+
+            .cart-item {
+                grid-template-columns: 50px 1fr auto;
+                gap: 9px;
+            }
+
+            .cart-product-icon {
                 width: 50px;
                 height: 50px;
             }
 
-            .logo {
-                font-size: 1.55rem;
-                letter-spacing: 1.5px;
-            }
-
-            .logo-sub {
-                font-size: 0.62rem;
-                letter-spacing: 1px;
-            }
-
-            .nav-menu {
-                gap: 7px 16px;
-                font-size: 0.78rem;
-            }
-
-            .header-actions {
-                gap: 12px;
-            }
-
-            .hero {
-                padding: 50px 0 45px;
-            }
-
-            .hero h1 {
-                font-size: 1.55rem;
-                line-height: 1.9;
-            }
-
-            .hero p {
-                font-size: 0.88rem;
-                line-height: 2.1;
-            }
-
-            .section-title {
-                margin-top: 52px;
-                margin-bottom: 30px;
-            }
-
-            .section-title h2 {
-                font-size: 1.45rem;
-            }
-
-            .section-title p {
+            .cart-product-name {
                 font-size: 0.82rem;
             }
 
-            .product-grid {
-                gap: 14px;
-            }
-
-            .product-image {
-                height: 220px;
-                font-size: 3.2rem;
-            }
-
-            .product-info {
-                padding: 14px 12px 16px;
-            }
-
-            .product-info h3 {
-                font-size: 0.83rem;
-            }
-
-            .price {
-                font-size: 0.9rem;
-            }
-
-            .price .old {
+            .cart-item-total {
                 font-size: 0.7rem;
-            }
-
-            .btn-add {
-                font-size: 0.69rem;
-                padding: 7px 9px;
-            }
-
-            .story-section {
-                padding: 55px 0;
-                margin-top: 55px;
-            }
-
-            .story-image {
-                min-height: 210px;
-                font-size: 4rem;
-            }
-
-            .story-text p {
-                font-size: 0.86rem;
-                line-height: 2.15;
-            }
-
-            .footer {
-                padding-top: 45px;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .footer .container {
-                grid-template-columns: 1fr;
-                gap: 28px;
-            }
-
-            .product-image {
-                height: 190px;
-            }
-
-            .hero h1 {
-                font-size: 1.35rem;
-            }
-
-            .btn-primary {
-                min-width: 200px;
-                min-height: 50px;
-                padding: 10px 25px;
             }
         }
     </style>
@@ -838,332 +908,373 @@
 
 <body>
 
-    <!-- =========================================================
-         TOP BANNER
-    ========================================================= -->
+    <!-- ===== TOP BANNER ===== -->
     <div class="top-banner">
         <span>🔥 تخفیف ویژه تا <span class="highlight">۳۰٪</span> برای محصولات منتخب</span>
         <span>✨ ارسال رایگان برای سفارش‌های بالای <span class="highlight">۱,۰۰۰,۰۰۰ تومان</span></span>
         <span>🎁 <span class="highlight">۱۰٪</span> تخفیف برای پرداخت نقدی</span>
     </div>
 
-    <!-- =========================================================
-         HEADER
-    ========================================================= -->
+    <!-- ===== HEADER ===== -->
     <header class="header">
         <div class="container">
 
-            <div class="brand-block">
-                <!-- لوگوی ارسالی شما؛ داخل خود فایل HTML قرار داده شده -->
-                <img
-                    class="brand-logo"
-                    src="data:image/png;base64,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"
-                    alt="لوگوی Gallery Harika"
-                />
-
-                <div class="logo">
-                    Gallery <span>Harika</span>
-                </div>
-
-                <div class="logo-sub">
-                    پوشاک مردانه · اصالت و کیفیت
-                </div>
+            <div class="logo">
+                Gallery <span>Harika</span>
+                <span class="logo-sub">پوشاک مردانه · اصالت و کیفیت</span>
             </div>
 
-            <nav class="nav-menu" aria-label="منوی اصلی">
-                <a href="#home">خانه</a>
+            <nav class="nav-menu">
+                <a href="#">خانه</a>
                 <a href="#products">محصولات</a>
                 <a href="#story">داستان ما</a>
-                <a href="#magazine">مجله</a>
+                <a href="#blog">مجله</a>
                 <a href="#contact">تماس با ما</a>
             </nav>
 
-            <div class="header-actions" aria-label="ابزارهای سایت">
-                <button class="icon-button" aria-label="جستجو" title="جستجو">
-                    <i class="fas fa-search"></i>
-                </button>
+            <div class="header-actions">
 
-                <button class="icon-button" aria-label="حساب کاربری" title="حساب کاربری">
-                    <i class="fas fa-user"></i>
-                </button>
+                <i class="fas fa-search" title="جستجو"></i>
 
-                <button class="icon-button cart-badge" aria-label="سبد خرید" title="سبد خرید">
+                <i class="fas fa-user" title="حساب کاربری"></i>
+
+                <div class="cart-badge" id="cartButton" title="سبد خرید">
                     <i class="fas fa-shopping-bag"></i>
-                    <span class="badge">۳</span>
-                </button>
+                    <span class="badge" id="cartCount">۰</span>
+                </div>
+
             </div>
 
         </div>
     </header>
 
-    <!-- =========================================================
-         HERO
-    ========================================================= -->
-    <main id="home">
-        <section class="hero">
-            <div class="container">
-                <h1>
-                    <strong>Gallery Harika</strong>
-                    · پوشاکی برای مردان امروز
-                </h1>
-
-                <p>
-                    کیفیت بی‌نظیر، طراحی مدرن و قیمت منصفانه.
-                    مجموعه‌ای از تی‌شرت‌ها، پیراهن‌ها و پوشاک روزمره
-                    با اصالت ساخت ایران.
-                </p>
-
-                <a href="#products" class="btn-primary">
-                    مشاهده مجموعه
-                </a>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             PRODUCTS
-        ====================================================== -->
-        <section id="products" class="container">
-            <div class="section-title">
-                <h2>
-                    محصولات <span>پرطرفدار</span>
-                </h2>
-                <p>
-                    انتخابی از بهترین‌های Gallery Harika برای استایل روزمره شما
-                </p>
-            </div>
-
-            <div class="product-grid">
-
-                <!-- Product 1 -->
-                <article class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-tshirt"></i>
-                        <span class="tag">پرفروش</span>
-                    </div>
-
-                    <div class="product-info">
-                        <div class="brand">Gallery Harika</div>
-                        <h3>تی‌شرت یقه‌دار کلاسیک</h3>
-
-                        <div class="price">
-                            <span>۴۲۰,۰۰۰ تومان</span>
-                            <span class="old">۵۶۰,۰۰۰</span>
-                        </div>
-
-                        <div class="rating">
-                            ★★★★★
-                            <span>(۱۲۴)</span>
-                        </div>
-
-                        <button class="btn-add">
-                            افزودن به سبد خرید
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Product 2 -->
-                <article class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-tshirt"></i>
-                        <span class="tag">جدید</span>
-                    </div>
-
-                    <div class="product-info">
-                        <div class="brand">Gallery Harika</div>
-                        <h3>تی‌شرت طرح‌دار مینیمال</h3>
-
-                        <div class="price">
-                            <span>۳۸۰,۰۰۰ تومان</span>
-                            <span class="old">—</span>
-                        </div>
-
-                        <div class="rating">
-                            ★★★★☆
-                            <span>(۸۷)</span>
-                        </div>
-
-                        <button class="btn-add">
-                            افزودن به سبد خرید
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Product 3 -->
-                <article class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-
-                    <div class="product-info">
-                        <div class="brand">Gallery Harika</div>
-                        <h3>پیراهن کتان تابستانی</h3>
-
-                        <div class="price">
-                            <span>۶۵۰,۰۰۰ تومان</span>
-                            <span class="old">۸۲۰,۰۰۰</span>
-                        </div>
-
-                        <div class="rating">
-                            ★★★★★
-                            <span>(۵۶)</span>
-                        </div>
-
-                        <button class="btn-add">
-                            افزودن به سبد خرید
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Product 4 -->
-                <article class="product-card">
-                    <div class="product-image">
-                        <i class="fas fa-tshirt"></i>
-                    </div>
-
-                    <div class="product-info">
-                        <div class="brand">Gallery Harika</div>
-                        <h3>تی‌شرت یقه‌گرد ساده</h3>
-
-                        <div class="price">
-                            <span>۳۵۰,۰۰۰ تومان</span>
-                            <span class="old">—</span>
-                        </div>
-
-                        <div class="rating">
-                            ★★★★☆
-                            <span>(۲۰۳)</span>
-                        </div>
-
-                        <button class="btn-add">
-                            افزودن به سبد خرید
-                        </button>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- =====================================================
-             STORY
-        ====================================================== -->
-        <section id="story" class="story-section">
-            <div class="container">
-
-                <div class="story-text">
-                    <h2>
-                        داستان <span>Gallery Harika</span>
-                    </h2>
-
-                    <p>
-                        <strong>Gallery Harika</strong>
-                        در سال ۱۴۰۲ با یک ایده ساده اما قدرتمند متولد شد —
-                        ارائه پوشاک مردانه‌ای که تلفیقی از
-                        <strong>راحتی</strong> و <strong>سبک</strong> باشد.
-                        ما معتقدیم که یک مرد امروزی به لباسی نیاز دارد
-                        که هم در جلسات کاری و هم در دورهمی‌های دوستانه،
-                        جلوه‌ای خاص داشته باشد.
-                    </p>
-
-                    <p>
-                        با تکیه بر <strong>کیفیت پارچه</strong>،
-                        <strong>دوخت دقیق</strong> و
-                        <strong>طراحی مینیمال</strong>،
-                        هر محصول Gallery Harika با عشق و توجه به جزئیات تولید می‌شود.
-                        ما به <strong>ساخت ایران</strong> افتخار می‌کنیم
-                        و می‌کوشیم پوشاکی در سطح استانداردهای جهانی را
-                        با قیمتی منصفانه به دست شما برسانیم.
-                    </p>
-
-                    <p>
-                        <em>
-                            «پوشاکی برای مردانی که به جزئیات اهمیت می‌دهند.»
-                        </em>
-                    </p>
-                </div>
-
-                <div class="story-image" aria-label="تصویر فروشگاه">
-                    <i class="fas fa-store-alt"></i>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- =====================================================
-             BLOG
-        ====================================================== -->
-        <section id="magazine" class="container blog-preview">
-
-            <div class="section-title">
-                <h2>
-                    مجله <span>Gallery Harika</span>
-                </h2>
-                <p>
-                    جدیدترین مطالب درباره مد، استایل و کیفیت پوشاک مردانه
-                </p>
-            </div>
-
-            <div class="blog-grid">
-
-                <article class="blog-card">
-                    <div class="date">۱۴۰۴/۰۲/۱۵</div>
-                    <h3>
-                        چرا یک مرد باید حداقل ۳ تی‌شرت باکیفیت در کمد داشته باشد؟
-                    </h3>
-                    <p>
-                        تی‌شرت‌های باکیفیت نه تنها ظاهر شما را متحول می‌کنند،
-                        بلکه دوام و راحتی بی‌نظیری را به همراه دارند...
-                    </p>
-                    <a href="#" class="read-more">
-                        بیشتر بخوانید ←
-                    </a>
-                </article>
-
-                <article class="blog-card">
-                    <div class="date">۱۴۰۴/۰۲/۰۸</div>
-                    <h3>
-                        راهنمای انتخاب پارچه مناسب برای تی‌شرت تابستانی
-                    </h3>
-                    <p>
-                        از پنبه تا کتان و الیاف مدرن —
-                        هر پارچه‌ای برای یک فصل و کاربرد خاص طراحی شده است...
-                    </p>
-                    <a href="#" class="read-more">
-                        بیشتر بخوانید ←
-                    </a>
-                </article>
-
-                <article class="blog-card">
-                    <div class="date">۱۴۰۴/۰۲/۰۱</div>
-                    <h3>
-                        ۵ نکته طلایی برای ست کردن لباس‌های مردانه
-                    </h3>
-                    <p>
-                        با رعایت چند اصل ساده می‌توانید استایل خود را
-                        به سطح بالاتری ببرید و همیشه خوش‌پوش باشید...
-                    </p>
-                    <a href="#" class="read-more">
-                        بیشتر بخوانید ←
-                    </a>
-                </article>
-
-            </div>
-        </section>
-    </main>
-
-    <!-- =========================================================
-         FOOTER
-    ========================================================= -->
-    <footer id="contact" class="footer">
+    <!-- ===== HERO ===== -->
+    <section class="hero">
         <div class="container">
 
-            <div class="footer-column">
-                <h4>Gallery Harika</h4>
+            <h1>
+                <strong>Gallery Harika</strong>
+                · پوشاکی برای مردان امروز
+            </h1>
+
+            <p>
+                کیفیت بی‌نظیر، طراحی مدرن و قیمت منصفانه.
+                مجموعه‌ای از تی‌شرت‌ها، پیراهن‌ها و پوشاک روزمره
+                با اصالت ساخت ایران.
+            </p>
+
+            <a href="#products" class="btn-primary">
+                مشاهده مجموعه
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <main class="container" id="products">
+
+        <div class="section-title">
+            <h2>
+                محصولات <span>پرطرفدار</span>
+            </h2>
+
+            <p>
+                انتخابی از بهترین‌های Gallery Harika برای استایل روزمره شما
+            </p>
+        </div>
+
+        <div class="product-grid">
+
+            <!-- Product 1 -->
+            <div class="product-card"
+                 data-product-id="product-1">
+
+                <div class="product-image">
+                    <i class="fas fa-tshirt"></i>
+                    <span class="tag">پرفروش</span>
+                </div>
+
+                <div class="product-info">
+
+                    <div class="brand">
+                        Gallery Harika
+                    </div>
+
+                    <h3>
+                        تی‌شرت یقه‌دار کلاسیک
+                    </h3>
+
+                    <div class="price">
+                        ۴۲۰,۰۰۰ تومان
+                        <span class="old">۵۶۰,۰۰۰</span>
+                    </div>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(۱۲۴)</span>
+                    </div>
+
+                    <button class="btn-add" type="button">
+                        افزودن به سبد خرید
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card"
+                 data-product-id="product-2">
+
+                <div class="product-image">
+                    <i class="fas fa-tshirt"></i>
+                    <span class="tag">جدید</span>
+                </div>
+
+                <div class="product-info">
+
+                    <div class="brand">
+                        Gallery Harika
+                    </div>
+
+                    <h3>
+                        تی‌شرت طرح‌دار مینیمال
+                    </h3>
+
+                    <div class="price">
+                        ۳۸۰,۰۰۰ تومان
+                        <span class="old">—</span>
+                    </div>
+
+                    <div class="rating">
+                        ★★★★☆
+                        <span>(۸۷)</span>
+                    </div>
+
+                    <button class="btn-add" type="button">
+                        افزودن به سبد خرید
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card"
+                 data-product-id="product-3">
+
+                <div class="product-image">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+
+                <div class="product-info">
+
+                    <div class="brand">
+                        Gallery Harika
+                    </div>
+
+                    <h3>
+                        پیراهن کتان تابستانی
+                    </h3>
+
+                    <div class="price">
+                        ۶۵۰,۰۰۰ تومان
+                        <span class="old">۸۲۰,۰۰۰</span>
+                    </div>
+
+                    <div class="rating">
+                        ★★★★★
+                        <span>(۵۶)</span>
+                    </div>
+
+                    <button class="btn-add" type="button">
+                        افزودن به سبد خرید
+                    </button>
+
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card"
+                 data-product-id="product-4">
+
+                <div class="product-image">
+                    <i class="fas fa-tshirt"></i>
+                </div>
+
+                <div class="product-info">
+
+                    <div class="brand">
+                        Gallery Harika
+                    </div>
+
+                    <h3>
+                        تی‌شرت یقه‌گرد ساده
+                    </h3>
+
+                    <div class="price">
+                        ۳۵۰,۰۰۰ تومان
+                        <span class="old">—</span>
+                    </div>
+
+                    <div class="rating">
+                        ★★★★☆
+                        <span>(۲۰۳)</span>
+                    </div>
+
+                    <button class="btn-add" type="button">
+                        افزودن به سبد خرید
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===== STORY SECTION ===== -->
+    <section class="story-section" id="story">
+
+        <div class="container">
+
+            <div class="story-text">
+
+                <h2>
+                    داستان <span>Gallery Harika</span>
+                </h2>
+
+                <p>
+                    <strong>Gallery Harika</strong>
+                    در سال ۱۴۰۲ با یک ایده ساده اما قدرتمند متولد شد —
+                    ارائه پوشاک مردانه‌ای که تلفیقی از
+                    <strong>راحتی</strong> و <strong>سبک</strong> باشد.
+                    ما معتقدیم که یک مرد امروزی به لباسی نیاز دارد که هم
+                    در جلسات کاری و هم در دورهمی‌های دوستانه،
+                    جلوه‌ای خاص داشته باشد.
+                </p>
+
+                <p>
+                    با تکیه بر <strong>کیفیت پارچه</strong>،
+                    <strong>دوخت دقیق</strong> و
+                    <strong>طراحی مینیمال</strong>،
+                    هر محصول Gallery Harika با عشق و توجه به جزئیات تولید می‌شود.
+                    ما به <strong>ساخت ایران</strong> افتخار می‌کنیم
+                    و می‌کوشیم تا پوشاکی در سطح استانداردهای جهانی
+                    را با قیمتی منصفانه به دست شما برسانیم.
+                </p>
+
+                <p>
+                    <em>
+                        «پوشاکی برای مردانی که به جزئیات اهمیت می‌دهند.»
+                    </em>
+                </p>
+
+            </div>
+
+            <div class="story-image">
+                <i class="fas fa-store-alt"></i>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== BLOG PREVIEW ===== -->
+    <section class="container blog-preview" id="blog">
+
+        <div class="section-title">
+
+            <h2>
+                مجله <span>Gallery Harika</span>
+            </h2>
+
+            <p>
+                جدیدترین مطالب درباره مد، استایل و کیفیت پوشاک مردانه
+            </p>
+
+        </div>
+
+        <div class="blog-grid">
+
+            <div class="blog-card">
+
+                <div class="date">
+                    ۱۴۰۴/۰۲/۱۵
+                </div>
+
+                <h3>
+                    چرا یک مرد باید حداقل ۳ تی‌شرت باکیفیت در کمد داشته باشد؟
+                </h3>
+
+                <p>
+                    تی‌شرت‌های باکیفیت نه تنها ظاهر شما را متحول می‌کنند،
+                    بلکه دوام و راحتی بی‌نظیری را به همراه دارند...
+                </p>
+
+                <a href="#" class="read-more">
+                    بیشتر بخوانید ←
+                </a>
+
+            </div>
+
+            <div class="blog-card">
+
+                <div class="date">
+                    ۱۴۰۴/۰۲/۰۸
+                </div>
+
+                <h3>
+                    راهنمای انتخاب پارچه مناسب برای تی‌شرت تابستانی
+                </h3>
+
+                <p>
+                    از پنبه تا کتان و الیاف مدرن —
+                    هر پارچه‌ای برای یک فصل و کاربرد خاص طراحی شده است...
+                </p>
+
+                <a href="#" class="read-more">
+                    بیشتر بخوانید ←
+                </a>
+
+            </div>
+
+            <div class="blog-card">
+
+                <div class="date">
+                    ۱۴۰۴/۰۲/۰۱
+                </div>
+
+                <h3>
+                    ۵ نکته طلایی برای ست کردن لباس‌های مردانه
+                </h3>
+
+                <p>
+                    با رعایت چند اصل ساده می‌توانید استایل خود را
+                    به سطح بالاتری ببرید و همیشه خوش‌پوش باشید...
+                </p>
+
+                <a href="#" class="read-more">
+                    بیشتر بخوانید ←
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="contact">
+
+        <div class="container">
+
+            <div>
+
+                <h4>
+                    Gallery Harika
+                </h4>
 
                 <p>
                     پوشاک مردانه با اصالت و کیفیت
                 </p>
 
-                <p style="margin-top:8px; font-size:0.8rem; color:#888;">
+                <p style="margin-top:6px; font-size:0.8rem; color:#888;">
                     <i class="fas fa-map-pin"></i>
                     تهران، خیابان ولیعصر
                     <br />
@@ -1175,22 +1286,30 @@
                     <i class="fas fa-envelope"></i>
                     info@galleryharika.com
                 </p>
+
             </div>
 
-            <div class="footer-column">
-                <h4>دسترسی سریع</h4>
+            <div>
+
+                <h4>
+                    دسترسی سریع
+                </h4>
 
                 <ul>
-                    <li><a href="#home">خانه</a></li>
+                    <li><a href="#">خانه</a></li>
                     <li><a href="#products">محصولات</a></li>
                     <li><a href="#story">داستان ما</a></li>
-                    <li><a href="#magazine">مجله</a></li>
+                    <li><a href="#blog">مجله</a></li>
                     <li><a href="#contact">تماس با ما</a></li>
                 </ul>
+
             </div>
 
-            <div class="footer-column">
-                <h4>خدمات مشتریان</h4>
+            <div>
+
+                <h4>
+                    خدمات مشتریان
+                </h4>
 
                 <ul>
                     <li><a href="#">سوالات متداول</a></li>
@@ -1198,32 +1317,29 @@
                     <li><a href="#">راهنمای اندازه‌گیری</a></li>
                     <li><a href="#">قوانین و مقررات</a></li>
                 </ul>
+
             </div>
 
-            <div class="footer-column">
-                <h4>ما را دنبال کنید</h4>
+            <div>
+
+                <h4>
+                    ما را دنبال کنید
+                </h4>
 
                 <div class="social">
-                    <a href="#" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
 
-                    <a href="#" aria-label="Telegram">
-                        <i class="fab fa-telegram"></i>
-                    </a>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-telegram"></i>
+                    <i class="fab fa-whatsapp"></i>
+                    <i class="fab fa-youtube"></i>
 
-                    <a href="#" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-
-                    <a href="#" aria-label="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
                 </div>
 
                 <p style="margin-top:16px; font-size:0.8rem; color:#888;">
-                    برای دریافت تخفیف‌های ویژه و اخبار جدید، ما را دنبال کنید.
+                    برای دریافت تخفیف‌های ویژه و اخبار جدید،
+                    ما را دنبال کنید.
                 </p>
+
             </div>
 
         </div>
@@ -1233,7 +1349,932 @@
             <strong>Gallery Harika</strong>
             محفوظ است.
         </div>
+
     </footer>
+
+    <!-- =========================================================
+         SHOPPING CART MODAL
+    ========================================================= -->
+
+    <div
+        class="cart-overlay"
+        id="cartOverlay"
+        aria-hidden="true"
+    >
+
+        <div
+            class="cart-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-label="سبد خرید"
+        >
+
+            <div class="cart-header">
+
+                <h2>
+                    <i class="fas fa-shopping-bag"></i>
+                    سبد خرید
+                </h2>
+
+                <button
+                    type="button"
+                    class="cart-close"
+                    id="cartClose"
+                    aria-label="بستن سبد خرید"
+                >
+                    <i class="fas fa-times"></i>
+                </button>
+
+            </div>
+
+            <div
+                class="cart-body"
+                id="cartBody"
+            ></div>
+
+            <div class="cart-footer">
+
+                <div class="cart-summary-row">
+
+                    <span>
+                        جمع کل
+                    </span>
+
+                    <strong id="cartTotal">
+                        ۰ تومان
+                    </strong>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="checkout-btn"
+                    id="checkoutBtn"
+                >
+                    ادامه ثبت سفارش
+                </button>
+
+                <button
+                    type="button"
+                    class="clear-cart-btn"
+                    id="clearCartBtn"
+                >
+                    پاک کردن سبد خرید
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ===== CART TOAST ===== -->
+    <div
+        class="cart-toast"
+        id="cartToast"
+        role="status"
+        aria-live="polite"
+    ></div>
+
+    <!-- =========================================================
+         SHOPPING CART JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+        (function () {
+
+            "use strict";
+
+            const STORAGE_KEY = "gallery_harika_cart";
+
+            let cart = [];
+
+            /* =========================
+               Persian digits
+            ========================= */
+
+            function toEnglishDigits(value) {
+                return String(value)
+                    .replace(/[۰-۹]/g, function (digit) {
+                        return "۰۱۲۳۴۵۶۷۸۹".indexOf(digit);
+                    })
+                    .replace(/[٠-٩]/g, function (digit) {
+                        return "٠١٢٣٤٥٦٧٨٩".indexOf(digit);
+                    });
+            }
+
+            /* =========================
+               Format price
+            ========================= */
+
+            function formatPrice(number) {
+                return Number(number || 0).toLocaleString("fa-IR") + " تومان";
+            }
+
+            /* =========================
+               Load cart
+            ========================= */
+
+            function loadCart() {
+
+                try {
+
+                    const savedCart =
+                        localStorage.getItem(STORAGE_KEY);
+
+                    if (!savedCart) {
+                        cart = [];
+                        return;
+                    }
+
+                    const parsed =
+                        JSON.parse(savedCart);
+
+                    if (Array.isArray(parsed)) {
+                        cart = parsed;
+                    } else {
+                        cart = [];
+                    }
+
+                } catch (error) {
+
+                    console.warn(
+                        "Gallery Harika cart load error:",
+                        error
+                    );
+
+                    cart = [];
+                }
+            }
+
+            /* =========================
+               Save cart
+            ========================= */
+
+            function saveCart() {
+
+                try {
+
+                    localStorage.setItem(
+                        STORAGE_KEY,
+                        JSON.stringify(cart)
+                    );
+
+                } catch (error) {
+
+                    console.warn(
+                        "Gallery Harika cart save error:",
+                        error
+                    );
+                }
+            }
+
+            /* =========================
+               Product helpers
+            ========================= */
+
+            function getProductCard(productButton) {
+                return productButton.closest(".product-card");
+            }
+
+            function getProductId(card) {
+                return card.dataset.productId || "";
+            }
+
+            function getProductName(card) {
+
+                const element =
+                    card.querySelector(".product-info h3");
+
+                return element
+                    ? element.textContent.trim()
+                    : "محصول Gallery Harika";
+            }
+
+            function getProductPrice(card) {
+
+                const priceElement =
+                    card.querySelector(".product-info .price");
+
+                if (!priceElement) {
+                    return 0;
+                }
+
+                /*
+                 * فقط متن قیمت اصلی را می‌گیریم.
+                 * قیمت قدیمی داخل .old قرار دارد.
+                 */
+
+                const oldElement =
+                    priceElement.querySelector(".old");
+
+                if (oldElement) {
+                    oldElement.remove();
+                }
+
+                const rawPrice =
+                    toEnglishDigits(
+                        priceElement.textContent
+                    ).replace(/[^\d]/g, "");
+
+                /*
+                 * چون ممکن است DOM را دستکاری کرده باشیم،
+                 * عنصر old را دوباره از روی داده اصلی نمی‌سازیم.
+                 * مقدار قیمت از متن اصلی کارت به‌دست می‌آید.
+                 */
+
+                return Number(rawPrice || 0);
+            }
+
+            /*
+             * نسخه امن‌تر استخراج قیمت:
+             * متن قیمت را قبل از حذف old می‌خوانیم.
+             */
+
+            function getProductPriceSafe(card) {
+
+                const priceElement =
+                    card.querySelector(".product-info .price");
+
+                if (!priceElement) {
+                    return 0;
+                }
+
+                let priceText = "";
+
+                priceElement.childNodes.forEach(function (node) {
+
+                    if (
+                        node.nodeType === Node.TEXT_NODE
+                    ) {
+                        priceText += node.textContent;
+                    }
+
+                });
+
+                const rawPrice =
+                    toEnglishDigits(priceText)
+                        .replace(/[^\d]/g, "");
+
+                return Number(rawPrice || 0);
+            }
+
+            /* =========================
+               Cart count
+            ========================= */
+
+            function getCartCount() {
+
+                return cart.reduce(
+                    function (total, item) {
+                        return total + Number(item.quantity || 0);
+                    },
+                    0
+                );
+            }
+
+            /* =========================
+               Cart total
+            ========================= */
+
+            function getCartTotal() {
+
+                return cart.reduce(
+                    function (total, item) {
+
+                        return total +
+                            (
+                                Number(item.price || 0) *
+                                Number(item.quantity || 0)
+                            );
+
+                    },
+                    0
+                );
+            }
+
+            /* =========================
+               Update badge
+            ========================= */
+
+            function updateCartBadge() {
+
+                const badge =
+                    document.getElementById("cartCount");
+
+                if (!badge) {
+                    return;
+                }
+
+                const count =
+                    getCartCount();
+
+                badge.textContent =
+                    count.toLocaleString("fa-IR");
+
+                badge.style.display =
+                    count > 0 ? "flex" : "none";
+            }
+
+            /* =========================
+               Toast
+            ========================= */
+
+            let toastTimer = null;
+
+            function showToast(message) {
+
+                const toast =
+                    document.getElementById("cartToast");
+
+                if (!toast) {
+                    return;
+                }
+
+                toast.textContent = message;
+                toast.classList.add("show");
+
+                clearTimeout(toastTimer);
+
+                toastTimer =
+                    setTimeout(function () {
+                        toast.classList.remove("show");
+                    }, 2200);
+            }
+
+            /* =========================
+               Add to cart
+            ========================= */
+
+            function addToCart(card, button) {
+
+                const id =
+                    getProductId(card);
+
+                const name =
+                    getProductName(card);
+
+                const price =
+                    getProductPriceSafe(card);
+
+                if (!id || !name || !price) {
+
+                    showToast(
+                        "خطا در اطلاعات محصول"
+                    );
+
+                    return;
+                }
+
+                const existing =
+                    cart.find(function (item) {
+                        return item.id === id;
+                    });
+
+                if (existing) {
+
+                    existing.quantity += 1;
+
+                } else {
+
+                    cart.push({
+                        id: id,
+                        name: name,
+                        price: price,
+                        quantity: 1
+                    });
+                }
+
+                saveCart();
+                updateCartBadge();
+                renderCart();
+
+                /*
+                 * افکت کوتاه روی دکمه
+                 */
+
+                if (button) {
+
+                    const originalText =
+                        button.dataset.originalText ||
+                        button.textContent;
+
+                    button.dataset.originalText =
+                        originalText;
+
+                    button.textContent =
+                        "✓ اضافه شد";
+
+                    button.classList.add("added");
+
+                    setTimeout(function () {
+
+                        button.textContent =
+                            originalText;
+
+                        button.classList.remove("added");
+
+                    }, 900);
+                }
+
+                showToast(
+                    "محصول به سبد خرید اضافه شد"
+                );
+            }
+
+            /* =========================
+               Remove
+            ========================= */
+
+            function removeFromCart(id) {
+
+                cart =
+                    cart.filter(function (item) {
+                        return item.id !== id;
+                    });
+
+                saveCart();
+                updateCartBadge();
+                renderCart();
+
+                showToast(
+                    "محصول از سبد خرید حذف شد"
+                );
+            }
+
+            /* =========================
+               Quantity
+            ========================= */
+
+            function changeQuantity(id, amount) {
+
+                const item =
+                    cart.find(function (product) {
+                        return product.id === id;
+                    });
+
+                if (!item) {
+                    return;
+                }
+
+                item.quantity += amount;
+
+                if (item.quantity <= 0) {
+                    removeFromCart(id);
+                    return;
+                }
+
+                saveCart();
+                updateCartBadge();
+                renderCart();
+            }
+
+            /* =========================
+               Clear cart
+            ========================= */
+
+            function clearCart() {
+
+                if (cart.length === 0) {
+
+                    showToast(
+                        "سبد خرید از قبل خالی است"
+                    );
+
+                    return;
+                }
+
+                const confirmed =
+                    window.confirm(
+                        "آیا مطمئن هستید که می‌خواهید سبد خرید پاک شود؟"
+                    );
+
+                if (!confirmed) {
+                    return;
+                }
+
+                cart = [];
+
+                saveCart();
+                updateCartBadge();
+                renderCart();
+
+                showToast(
+                    "سبد خرید پاک شد"
+                );
+            }
+
+            /* =========================
+               Escape HTML
+            ========================= */
+
+            function escapeHtml(value) {
+
+                return String(value)
+                    .replace(/&/g, "&amp;")
+                    .replace(/</g, "&lt;")
+                    .replace(/>/g, "&gt;")
+                    .replace(/"/g, "&quot;")
+                    .replace(/'/g, "&#039;");
+            }
+
+            /* =========================
+               Render cart
+            ========================= */
+
+            function renderCart() {
+
+                const body =
+                    document.getElementById("cartBody");
+
+                const total =
+                    document.getElementById("cartTotal");
+
+                if (!body || !total) {
+                    return;
+                }
+
+                if (cart.length === 0) {
+
+                    body.innerHTML = `
+                        <div class="empty-cart">
+
+                            <i class="fas fa-shopping-bag"></i>
+
+                            <strong>
+                                سبد خرید شما خالی است
+                            </strong>
+
+                            <span>
+                                محصولات مورد علاقه‌تان را به سبد اضافه کنید.
+                            </span>
+
+                        </div>
+                    `;
+
+                    total.textContent =
+                        "۰ تومان";
+
+                    return;
+                }
+
+                body.innerHTML =
+                    cart.map(function (item) {
+
+                        const itemTotal =
+                            Number(item.price) *
+                            Number(item.quantity);
+
+                        return `
+                            <div class="cart-item">
+
+                                <div class="cart-product-icon">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+
+                                <div class="cart-product-info">
+
+                                    <div class="cart-product-name">
+                                        ${escapeHtml(item.name)}
+                                    </div>
+
+                                    <div class="cart-product-price">
+                                        ${formatPrice(item.price)}
+                                    </div>
+
+                                    <div class="cart-quantity">
+
+                                        <button
+                                            type="button"
+                                            data-action="increase"
+                                            data-id="${escapeHtml(item.id)}"
+                                            aria-label="افزایش تعداد"
+                                        >
+                                            +
+                                        </button>
+
+                                        <span>
+                                            ${Number(item.quantity).toLocaleString("fa-IR")}
+                                        </span>
+
+                                        <button
+                                            type="button"
+                                            data-action="decrease"
+                                            data-id="${escapeHtml(item.id)}"
+                                            aria-label="کاهش تعداد"
+                                        >
+                                            −
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="cart-item-total">
+
+                                    ${formatPrice(itemTotal)}
+
+                                    <button
+                                        type="button"
+                                        class="cart-remove"
+                                        data-action="remove"
+                                        data-id="${escapeHtml(item.id)}"
+                                    >
+                                        حذف
+                                    </button>
+
+                                </div>
+
+                            </div>
+                        `;
+
+                    }).join("");
+
+                total.textContent =
+                    formatPrice(getCartTotal());
+            }
+
+            /* =========================
+               Open cart
+            ========================= */
+
+            function openCart() {
+
+                const overlay =
+                    document.getElementById("cartOverlay");
+
+                if (!overlay) {
+                    return;
+                }
+
+                renderCart();
+
+                overlay.classList.add("active");
+                overlay.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+                document.body.classList.add(
+                    "cart-open"
+                );
+            }
+
+            /* =========================
+               Close cart
+            ========================= */
+
+            function closeCart() {
+
+                const overlay =
+                    document.getElementById("cartOverlay");
+
+                if (!overlay) {
+                    return;
+                }
+
+                overlay.classList.remove("active");
+
+                overlay.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+                document.body.classList.remove(
+                    "cart-open"
+                );
+            }
+
+            /* =========================
+               Setup products
+            ========================= */
+
+            function setupProductButtons() {
+
+                const buttons =
+                    document.querySelectorAll(".btn-add");
+
+                buttons.forEach(function (button) {
+
+                    button.addEventListener(
+                        "click",
+                        function () {
+
+                            const card =
+                                getProductCard(button);
+
+                            if (!card) {
+                                return;
+                            }
+
+                            addToCart(
+                                card,
+                                button
+                            );
+                        }
+                    );
+                });
+            }
+
+            /* =========================
+               Setup cart button
+            ========================= */
+
+            function setupCartButton() {
+
+                const cartButton =
+                    document.getElementById("cartButton");
+
+                if (!cartButton) {
+                    return;
+                }
+
+                cartButton.addEventListener(
+                    "click",
+                    openCart
+                );
+            }
+
+            /* =========================
+               Setup cart events
+            ========================= */
+
+            function setupCartEvents() {
+
+                const overlay =
+                    document.getElementById("cartOverlay");
+
+                const closeButton =
+                    document.getElementById("cartClose");
+
+                const clearButton =
+                    document.getElementById("clearCartBtn");
+
+                const checkoutButton =
+                    document.getElementById("checkoutBtn");
+
+                if (closeButton) {
+
+                    closeButton.addEventListener(
+                        "click",
+                        closeCart
+                    );
+                }
+
+                if (clearButton) {
+
+                    clearButton.addEventListener(
+                        "click",
+                        clearCart
+                    );
+                }
+
+                if (overlay) {
+
+                    /*
+                     * کلیک روی پس‌زمینه
+                     */
+
+                    overlay.addEventListener(
+                        "click",
+                        function (event) {
+
+                            if (
+                                event.target === overlay
+                            ) {
+                                closeCart();
+                            }
+                        }
+                    );
+
+                    /*
+                     * دکمه‌های داخل سبد
+                     */
+
+                    overlay.addEventListener(
+                        "click",
+                        function (event) {
+
+                            const button =
+                                event.target.closest(
+                                    "button[data-action]"
+                                );
+
+                            if (!button) {
+                                return;
+                            }
+
+                            const action =
+                                button.dataset.action;
+
+                            const id =
+                                button.dataset.id;
+
+                            if (
+                                action === "increase"
+                            ) {
+                                changeQuantity(id, 1);
+                            }
+
+                            if (
+                                action === "decrease"
+                            ) {
+                                changeQuantity(id, -1);
+                            }
+
+                            if (
+                                action === "remove"
+                            ) {
+                                removeFromCart(id);
+                            }
+                        }
+                    );
+                }
+
+                if (checkoutButton) {
+
+                    checkoutButton.addEventListener(
+                        "click",
+                        function () {
+
+                            if (cart.length === 0) {
+
+                                showToast(
+                                    "سبد خرید شما خالی است"
+                                );
+
+                                return;
+                            }
+
+                            /*
+                             * فعلاً ثبت سفارش واقعی ساخته نشده.
+                             * در مرحله بعد فرم سفارش و دیتابیس را اضافه می‌کنیم.
+                             */
+
+                            alert(
+                                "سبد خرید آماده است. صفحه ثبت سفارش در مرحله بعد به فروشگاه اضافه می‌شود."
+                            );
+                        }
+                    );
+                }
+            }
+
+            /* =========================
+               Keyboard
+            ========================= */
+
+            function setupKeyboard() {
+
+                document.addEventListener(
+                    "keydown",
+                    function (event) {
+
+                        if (
+                            event.key === "Escape"
+                        ) {
+                            closeCart();
+                        }
+                    }
+                );
+            }
+
+            /* =========================
+               Initial state
+            ========================= */
+
+            function init() {
+
+                loadCart();
+
+                updateCartBadge();
+
+                renderCart();
+
+                setupProductButtons();
+
+                setupCartButton();
+
+                setupCartEvents();
+
+                setupKeyboard();
+            }
+
+            if (
+                document.readyState === "loading"
+            ) {
+
+                document.addEventListener(
+                    "DOMContentLoaded",
+                    init
+                );
+
+            } else {
+
+                init();
+            }
+
+        })();
+    </script>
 
 </body>
 </html>
